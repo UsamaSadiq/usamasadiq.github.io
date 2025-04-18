@@ -1,1 +1,172 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Usama Sadiq - Software Engineer</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    /* Reset & Base */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; line-height: 1.6; background: #f9f9f9; color: #333; }
+
+    /* Navbar */
+    header { position: fixed; top: 0; width: 100%; background: rgba(255,255,255,0.95); backdrop-filter: blur(8px); box-shadow: 0 2px 4px rgba(0,0,0,0.1); z-index: 1000; }
+    .nav-container { max-width: 1200px; margin: auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem; }
+    .logo { font-size: 1.5rem; font-weight: 800; }
+    nav ul { display: flex; gap: 1.5rem; }
+    nav a { text-decoration: none; color: #333; font-weight: 600; transition: color 0.3s; }
+    nav a:hover { color: #2196f3; }
+
+    /* Sections */
+    section { padding: 100px 1rem 60px; max-width: 1200px; margin: auto; opacity: 0; transform: translateY(30px); transition: all 0.6s ease-out; }
+    section.active { opacity: 1; transform: translateY(0); }
+    h2 { font-size: 2rem; margin-bottom: 1rem; text-align: center; position: relative; }
+    h2::after { content: ''; width: 60px; height: 4px; background: #2196f3; display: block; margin: 0.5rem auto 0; }
+
+    /* Hero */
+    #hero { display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; text-align: center; padding: 0 1rem; }
+    #hero h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+    #hero p { font-size: 1.25rem; max-width: 600px; }
+
+    /* Projects */
+    .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .project-card { position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+    .project-card img { width: 100%; display: block; transition: transform 0.4s; }
+    .project-card:hover img { transform: scale(1.1); }
+    .project-info { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.6); color: #fff; padding: 1rem; transform: translateY(100%); transition: transform 0.4s; }
+    .project-card:hover .project-info { transform: translateY(0); }
+
+    /* Skills */
+    .skills-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+    .skill { }
+    .skill-name { font-weight: 600; margin-bottom: 0.3rem; }
+    .skill-bar { background: #ddd; border-radius: 8px; overflow: hidden; }
+    .skill-level { height: 12px; width: 0; background: #2196f3; border-radius: 8px; transition: width 1s ease-out; }
+
+    /* Experience */
+    .timeline { position: relative; margin: 2rem 0; }
+    .timeline::before { content: ''; position: absolute; left: 20px; top: 0; bottom: 0; width: 4px; background: #2196f3; }
+    .entry { position: relative; padding-left: 60px; margin-bottom: 2rem; }
+    .entry::before { content: ''; position: absolute; left: 12px; top: 4px; width: 16px; height: 16px; background: #fff; border: 4px solid #2196f3; border-radius: 50%; }
+    .entry h3 { font-size: 1.1rem; font-weight: 600; }
+    .entry span { font-size: 0.9rem; color: #666; }
+
+    /* Contact */
+    .contact-form { max-width: 600px; margin: auto; display: grid; gap: 1rem; }
+    .contact-form input, .contact-form textarea { width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem; }
+    .contact-form button { padding: 0.75rem; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; }
+    .contact-form button:hover { background: #1976d2; color: #fff; }
+
+    /* Back-to-top */
+    #backToTop { position: fixed; bottom: 30px; right: 30px; background: #2196f3; color: #fff; border: none; padding: 0.75rem 1rem; border-radius: 50px; cursor: pointer; opacity: 0; visibility: hidden; transition: opacity 0.3s; }
+    #backToTop.show { opacity: 1; visibility: visible; }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      nav ul { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <div class="logo">Jane Doe</div>
+      <nav>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="hero" class="active">
+    <h1>Usama Sadiq</h1>
+    <p>Principal Software Engineer crafting scalable solutions and leading high-performing teams</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="project1.png" alt="Project 1">
+        <div class="project-info">
+          <h3>Scalable Microservices Platform</h3>
+          <p>Designed and implemented a microservices architecture serving 2M+ requests/day.</p>
+        </div>
+      </div>
+      <!-- More project cards -->
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-container">
+      <div class="skill">
+        <div class="skill-name">Python</div>
+        <div class="skill-bar"><div class="skill-level" data-level="95%"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">Django</div>
+        <div class="skill-bar"><div class="skill-level" data-level="90%"></div></div>
+      </div>
+      <!-- More skills -->
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="timeline">
+      <div class="entry">
+        <h3>Senior Developer at Arbisoft</h3>
+        <span>July 2018 – Present</span>
+        <p>Leading backend team, migrating monolith to microservices, improving CI/CD pipelines.</p>
+      </div>
+      <!-- More entries -->
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Usama Sadiq" required>
+      <input type="email" placeholder="usama7274@gmail.com" required>
+      <textarea rows="5" placeholder="Want to do business? Feel free to reach out !!!!" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <button id="backToTop">↑</button>
+
+  <script>
+    // Section reveal
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) entry.target.classList.add('active');
+      });
+    }, { threshold: 0.2 });
+    sections.forEach(s => observer.observe(s));
+
+    // Animate skills
+    window.addEventListener('load', () => {
+      document.querySelectorAll('.skill-level').forEach(bar => {
+        bar.style.width = bar.getAttribute('data-level');
+      });
+    });
+
+    // Back to top
+    const btn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if(window.pageYOffset > 300) btn.classList.add('show'); else btn.classList.remove('show');
+    });
+    btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  </script>
+</body>
+</html>
