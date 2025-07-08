@@ -1,0 +1,44 @@
+{
+  "Which HTML tag is used to create a hyperlink?": {
+    "<a>": "right",
+    "<link>": "wrong",
+    "<href>": "wrong",
+    "<url>": "wrong"
+  },
+  "What does CSS stand for?": {
+    "Cascading Style Sheets": "right",
+    "Computer Style Sheets": "wrong",
+    "Creative Style Sheets": "wrong",
+    "Colorful Style Sheets": "wrong"
+  },
+  "Which property is used to change the background color in CSS?": {
+    "background-color": "right",
+    "bg-color": "wrong",
+    "color": "wrong",
+    "background": "wrong"
+  },
+  "What is the correct HTML tag for the largest heading?": {
+    "<h1>": "right",
+    "<h6>": "wrong",
+    "<heading>": "wrong",
+    "<head>": "wrong"
+  },
+  "Which CSS property is used to control the text size?": {
+    "font-size": "right",
+    "text-size": "wrong",
+    "size": "wrong",
+    "text-style": "wrong"
+  },
+  "What is the correct way to include CSS in HTML?": {
+    "<link rel=\"stylesheet\" href=\"style.css\">": "right",
+    "<style src=\"style.css\">": "wrong",
+    "<css href=\"style.css\">": "wrong",
+    "<include css=\"style.css\">": "wrong"
+  },
+  "Which HTML attribute specifies an alternate text for an image?": {
+    "alt": "right",
+    "title": "wrong",
+    "src": "wrong",
+    "text": "wrong"
+  }
+}
