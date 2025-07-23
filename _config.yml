@@ -6,10 +6,12 @@ baseurl: ""
 url: "https://usamasadiq.github.io"
 
 # Build settings
-remote_theme: jekyll/minima
+remote_theme: mmistakes/minimal-mistakes
+minimal_mistakes_skin: "dark"
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-include-cache
 
 collections:
   projects:
