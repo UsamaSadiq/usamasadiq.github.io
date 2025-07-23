@@ -1,6 +1,6 @@
 # Usama Sadiq Portfolio
 
-This repository contains my personal portfolio powered by [Jekyll](https://jekyllrb.com/). It is ready for hosting on GitHub Pages and provides a structure for both project pages and blog posts.
+This repository contains my personal portfolio powered by [Jekyll](https://jekyllrb.com/) using the [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes) theme in dark mode by default. It is ready for hosting on GitHub Pages and provides a structure for both project pages and blog posts.
 
 ## Development
 
