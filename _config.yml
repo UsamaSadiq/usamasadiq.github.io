@@ -1,0 +1,17 @@
+title: "Usama Sadiq Portfolio"
+email: usama7274@gmail.com
+description: >-
+  Personal portfolio built with Jekyll.
+baseurl: ""
+url: "https://usamasadiq.github.io"
+
+# Build settings
+remote_theme: jekyll/minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
