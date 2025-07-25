@@ -1,0 +1,50 @@
+{
+  "Which of the following is the correct way to create a list in Python?": {
+    "list = []": "right",
+    "list = {}": "wrong",
+    "list = ()": "wrong",
+    "list = \"\"": "wrong"
+  },
+  "What is the output of print(2 ** 3)?": {
+    "Eight": "right",
+    "Six": "wrong",
+    "Nine": "wrong",
+    "Twenty-three": "wrong"
+  },
+  "Which keyword is used to define a function in Python?": {
+    "def": "right",
+    "function": "wrong",
+    "func": "wrong",
+    "define": "wrong"
+  },
+  "What is the correct way to import a module in Python?": {
+    "import module_name": "right",
+    "include module_name": "wrong",
+    "require module_name": "wrong",
+    "using module_name": "wrong"
+  },
+  "Which of these is a mutable data type in Python?": {
+    "list": "right",
+    "tuple": "wrong",
+    "string": "wrong",
+    "int": "wrong"
+  },
+  "What does the 'len()' function return?": {
+    "The length of an object": "right",
+    "The last element": "wrong",
+    "The first element": "wrong",
+    "The type of object": "wrong"
+  },
+  "Which operator is used for string concatenation in Python?": {
+    "+": "right",
+    "&": "wrong",
+    "*": "wrong",
+    "concat": "wrong"
+  },
+  "What is the correct syntax for a for loop in Python?": {
+    "for i in range(10):": "right",
+    "for (i = 0; i < 10; i++):": "wrong",
+    "for i = 1 to 10:": "wrong",
+    "foreach i in range(10):": "wrong"
+  }
+}

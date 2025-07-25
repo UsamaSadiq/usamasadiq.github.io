@@ -4,7 +4,15 @@ layout: page
 permalink: /about/
 ---
 
-Hi, I'm **Usama Sadiq**, a Principal Software Engineer, Open edX Core Contributor, and hands-on Python/Django + DevOps specialist with over 6 years of experience in building and scaling modern web infrastructure.
+Hi, I'm **Usama Sadiq**, a P---
+
+Thanks for reading. I'm always open to connect, collaborate, or share ideas. 
+
+**📄 [Download My Resume](/assets/resume.pdf)** - Get a comprehensive overview of my experience and skills.
+
+_"Code with clarity. Lead with empathy. Deliver with consistency."_
+
+![Open edX Core Contributor Badge](assets/img/openedx-core-contributor-badge.svg){:style="height:70px; margin-bottom: 1rem;"}l Software Engineer, Open edX Core Contributor, and hands-on Python/Django + DevOps specialist with over 6 years of experience in building and scaling modern web infrastructure.
 
 I bring a unique combination of backend engineering expertise, cloud-native DevOps practices, and open-source leadership to every initiative I work on.
 

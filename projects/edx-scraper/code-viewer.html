@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edX Scraper Source Code Viewer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Courier New', monospace;
+            background: #1e1e1e;
+            color: #d4d4d4;
+            line-height: 1.5;
+        }
+        
+        .code-container {
+            padding: 0;
+            background: #1e1e1e;
+            min-height: 100vh;
+        }
+        
+        .code-header {
+            background: #2d2d30;
+            padding: 15px 20px;
+            border-bottom: 1px solid #3e3e42;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .file-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .file-icon {
+            width: 16px;
+            height: 16px;
+            background: #3776ab;
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 10px;
+            font-weight: bold;
+        }
+        
+        .file-name {
+            color: #cccccc;
+            font-weight: 600;
+        }
+        
+        .file-stats {
+            color: #858585;
+            font-size: 12px;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .btn {
+            padding: 6px 12px;
+            border: 1px solid #3e3e42;
+            background: #2d2d30;
+            color: #cccccc;
+            border-radius: 4px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .btn:hover {
+            background: #3e3e42;
+            border-color: #4a4a4a;
+        }
+        
+        .btn-primary {
+            background: #0066cc;
+            border-color: #0066cc;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #0052a3;
+        }
+        
+        .code-content {
+            position: relative;
+        }
+        
+        .line-numbers {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 60px;
+            background: #252526;
+            border-right: 1px solid #3e3e42;
+            padding: 20px 10px;
+            text-align: right;
+            font-size: 12px;
+            color: #858585;
+            line-height: 1.5;
+            user-select: none;
+        }
+        
+        .code-text {
+            margin-left: 60px;
+            padding: 20px;
+            background: #1e1e1e;
+            white-space: pre;
+            font-size: 13px;
+            line-height: 1.5;
+            overflow-x: auto;
+        }
+        
+        /* Prism.js customizations */
+        pre[class*="language-"] {
+            background: transparent !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            border-radius: 0 !important;
+        }
+        
+        code[class*="language-"] {
+            background: transparent !important;
+            color: #d4d4d4 !important;
+            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Courier New', monospace !important;
+        }
+        
+        /* Python syntax highlighting */
+        .token.comment { color: #6a9955; }
+        .token.string { color: #ce9178; }
+        .token.keyword { color: #569cd6; }
+        .token.function { color: #dcdcaa; }
+        .token.class-name { color: #4ec9b0; }
+        .token.number { color: #b5cea8; }
+        .token.operator { color: #d4d4d4; }
+        .token.punctuation { color: #d4d4d4; }
+        .token.boolean { color: #569cd6; }
+        .token.decorator { color: #dcdcaa; }
+        
+        .copy-notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #0066cc;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 4px;
+            font-size: 12px;
+            z-index: 1000;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all 0.3s;
+        }
+        
+        .copy-notification.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        @media (max-width: 768px) {
+            .code-header {
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px 15px;
+            }
+            
+            .action-buttons {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .line-numbers {
+                width: 50px;
+                padding: 15px 8px;
+                font-size: 11px;
+            }
+            
+            .code-text {
+                margin-left: 50px;
+                padding: 15px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="code-container">
+        <div class="code-header">
+            <div class="file-info">
+                <div class="file-icon">Py</div>
+                <div>
+                    <div class="file-name">edx_course_scrapper.py</div>
+                    <div class="file-stats">259 lines • Python • Web Scraper</div>
+                </div>
+            </div>
+            <div class="action-buttons">
+                <button class="btn" onclick="copyCode()" id="copy-btn">
+                    📋 Copy Code
+                </button>
+                <a href="https://raw.githubusercontent.com/UsamaSadiq/usamasadiq.github.io/main/projects/edx-scraper/edx_course_scrapper.py" 
+                   class="btn btn-primary" target="_blank">
+                    ⬇️ Download
+                </a>
+            </div>
+        </div>
+        
+        <div class="code-content">
+            <div class="line-numbers" id="line-numbers"></div>
+            <div class="code-text">
+                <pre><code class="language-python" id="source-code">import requests
+from bs4 import BeautifulSoup
+import re
+import pandas as pd
+import time
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException, NoSuchElementException, WebDriverException
+import os # Import the os module to check for file existence
+
+# IMPORTANT: Before running this script, you need to:
+# 1. Install Selenium: pip install selenium pandas
+# 2. Download the appropriate WebDriver for your browser (e.g., ChromeDriver for Chrome).
+#    You can find ChromeDriver here: https://chromedriver.chromium.org/downloads
+# 3. Place the WebDriver executable in a directory that's in your system's PATH,
+#    or specify its path directly in the Service object (e.g., Service(executable_path='/path/to/chromedriver')).
+
+def initialize_driver():
+    """Initializes and returns a headless Chrome WebDriver."""
+    options = webdriver.ChromeOptions()
+    options.add_argument('--headless')  # Run in headless mode (no browser UI)
+    options.add_argument('--disable-gpu') # Required for headless on some systems
+    options.add_argument('--no-sandbox') # Bypass OS security model, required for some environments
+    options.add_argument('--disable-dev-shm-usage') # Overcome limited resource problems
+    options.add_argument('user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36')
+    
+    # If chromedriver is not in PATH, specify its path here:
+    # service = Service(executable_path='/path/to/your/chromedriver')
+    # driver = webdriver.Chrome(service=service, options=options)
+    
+    # If chromedriver is in PATH:
+    driver = webdriver.Chrome(options=options)
+    return driver
+
+def get_institution_links(base_schools_partners_url="https://www.edx.org/schools-partners"):
+    """
+    Scrapes the base edX schools-partners page to get the actual links for each institution
+    using Selenium to handle dynamically loaded content.
+    Returns a dictionary mapping institution names to their full edX profile URLs.
+    """
+    print(f"Fetching institution links from: {base_schools_partners_url} using Selenium...")
+    driver = None
+    institution_links = {}
+    try:
+        driver = initialize_driver()
+        driver.get(base_schools_partners_url)
+
+        # Wait for the page to load and for institution elements to be present
+        wait = WebDriverWait(driver, 20)
+        
+        # Try multiple selectors for institution links
+        selectors_to_try = [
+            'a[href*="/school/"]',  # Links containing "/school/" in href
+            'a[data-testid*="institution"]',  # Data testid containing "institution"
+            '.institution-card a',  # Anchor tags within institution card elements
+            '[class*="institution"] a',  # Anchor tags within elements with "institution" in class name
+            'a[href*="edx.org/school/"]'  # Full edX school URLs
+        ]
+        
+        institution_elements = []
+        for selector in selectors_to_try:
+            try:
+                print(f"Trying selector: {selector}")
+                institution_elements = wait.until(
+                    EC.presence_of_all_elements_located((By.CSS_SELECTOR, selector))
+                )
+                if institution_elements:
+                    print(f"Found {len(institution_elements)} elements with selector: {selector}")
+                    break
+            except TimeoutException:
+                print(f"Selector {selector} timed out, trying next...")
+                continue
+        
+        if not institution_elements:
+            print("No institution elements found with any selector. Page structure might have changed.")
+            return institution_links
+
+        for element in institution_elements:
+            try:
+                href = element.get_attribute('href')
+                if href and '/school/' in href:
+                    # Extract institution name from the link text or data attributes
+                    institution_name = element.text.strip()
+                    
+                    # If link text is empty, try to get name from parent element or other attributes
+                    if not institution_name:
+                        parent = element.find_element(By.XPATH, '..')
+                        institution_name = parent.text.strip()
+                    
+                    # If still empty, extract from URL
+                    if not institution_name:
+                        # Extract institution name from URL like "/school/harvardx" -> "harvardx"
+                        url_parts = href.split('/school/')
+                        if len(url_parts) > 1:
+                            institution_name = url_parts[1].split('/')[0].split('?')[0]
+                    
+                    if institution_name and href:
+                        institution_links[institution_name] = href
+                        print(f"Found institution: {institution_name} -> {href}")
+            except Exception as e:
+                print(f"Error processing institution element: {str(e)}")
+                continue
+        
+        print(f"Total institutions found: {len(institution_links)}")
+        
+    except Exception as e:
+        print(f"Error fetching institution links: {str(e)}")
+    finally:
+        if driver:
+            driver.quit()
+    
+    return institution_links
+
+def get_first_course_title(driver, institution_url):
+    """
+    Navigates to an institution's edX page and extracts the title of the first course
+    using multiple fallback selectors for robustness.
+    Returns the course title as a string, or an empty string if no course is found.
+    """
+    try:
+        print(f"Navigating to: {institution_url}")
+        driver.get(institution_url)
+        
+        # Wait for page to load
+        time.sleep(3)
+        
+        # Try multiple selectors for course titles in order of preference
+        selectors_to_try = [
+            'h3[data-testid="course-title-popover-trigger"]',  # Most specific selector
+            '.course-title',  # Generic course title class
+            'h3.course-name',  # Course name heading
+            '[class*="course"][class*="title"]',  # Any element with both "course" and "title" in class
+            '.course-card h3',  # H3 within course card
+            '.course-list h3',  # H3 within course list
+            'h3:contains("Course")',  # H3 containing the word "Course"
+            '.card-title',  # Generic card title
+            'h2.course-title',  # H2 course title
+            'h4.course-title',  # H4 course title
+            '[data-testid*="course"] h3',  # H3 within element with course in data-testid
+            '.course h3',  # H3 within course element
+            'article h3',  # H3 within article (course cards often use article)
+        ]
+        
+        for selector in selectors_to_try:
+            try:
+                # Use WebDriverWait for better reliability
+                course_title_element = WebDriverWait(driver, 10).until(
+                    EC.presence_of_element_located((By.CSS_SELECTOR, selector))
+                )
+                course_title = course_title_element.text.strip()
+                if course_title:  # Only return if we actually found text
+                    print(f"Found course title with selector '{selector}': {course_title}")
+                    return course_title
+            except (TimeoutException, NoSuchElementException):
+                continue  # Try the next selector
+        
+        # If no course title found with any selector
+        print(f"No course title found for {institution_url}")
+        return ""
+        
+    except Exception as e:
+        print(f"Error getting course title for {institution_url}: {str(e)}")
+        return ""
+
+def scrape_edx_institutions():
+    """
+    Main function that orchestrates the scraping process.
+    Gets institution links, then scrapes the first course title for each institution.
+    Saves results incrementally to a CSV file.
+    """
+    # Get institution links
+    institution_links = get_institution_links()
+    
+    if not institution_links:
+        print("No institution links found. Exiting.")
+        return
+    
+    # Prepare CSV file
+    csv_filename = "edx_institution_courses.csv"
+    
+    # Check if CSV file already exists
+    file_exists = os.path.isfile(csv_filename)
+    
+    # If file doesn't exist, create header
+    if not file_exists:
+        df_header = pd.DataFrame(columns=["Institution", "First Course Offered"])
+        df_header.to_csv(csv_filename, index=False)
+        print(f"Created new CSV file: {csv_filename}")
+    else:
+        print(f"Appending to existing CSV file: {csv_filename}")
+    
+    # Initialize WebDriver for course scraping
+    driver = None
+    try:
+        driver = initialize_driver()
+        
+        # Process each institution
+        for institution_name, institution_url in institution_links.items():
+            print(f"\nProcessing: {institution_name}")
+            
+            # Get the first course title
+            first_course = get_first_course_title(driver, institution_url)
+            
+            # Create a DataFrame for this row
+            row_data = pd.DataFrame({
+                "Institution": [institution_name],
+                "First Course Offered": [first_course]
+            })
+            
+            # Append to CSV file
+            row_data.to_csv(csv_filename, mode='a', header=False, index=False)
+            print(f"Saved: {institution_name} -> {first_course}")
+            
+            # Add a small delay between requests to be respectful
+            time.sleep(2)
+    
+    except Exception as e:
+        print(f"Error during scraping: {str(e)}")
+    finally:
+        if driver:
+            driver.quit()
+    
+    print(f"\nScraping completed. Results saved to {csv_filename}")
+
+if __name__ == "__main__":
+    scrape_edx_institutions()
+</code></pre>
+            </div>
+        </div>
+    </div>
+    
+    <div class="copy-notification" id="copy-notification">
+        Code copied to clipboard!
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    
+    <script>
+        // Generate line numbers
+        function generateLineNumbers() {
+            const code = document.getElementById('source-code').textContent;
+            const lines = code.split('\n');
+            const lineNumbers = document.getElementById('line-numbers');
+            
+            let lineNumberHTML = '';
+            for (let i = 1; i <= lines.length; i++) {
+                lineNumberHTML += i + '\n';
+            }
+            lineNumbers.textContent = lineNumberHTML;
+        }
+        
+        // Copy code to clipboard
+        function copyCode() {
+            const code = document.getElementById('source-code').textContent;
+            
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(code).then(() => {
+                    showCopyNotification();
+                }).catch(err => {
+                    console.error('Failed to copy: ', err);
+                    fallbackCopyTextToClipboard(code);
+                });
+            } else {
+                fallbackCopyTextToClipboard(code);
+            }
+        }
+        
+        // Fallback copy method
+        function fallbackCopyTextToClipboard(text) {
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            textArea.style.top = "0";
+            textArea.style.left = "0";
+            textArea.style.position = "fixed";
+            
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            
+            try {
+                const successful = document.execCommand('copy');
+                if (successful) {
+                    showCopyNotification();
+                }
+            } catch (err) {
+                console.error('Fallback: Oops, unable to copy', err);
+            }
+            
+            document.body.removeChild(textArea);
+        }
+        
+        // Show copy notification
+        function showCopyNotification() {
+            const notification = document.getElementById('copy-notification');
+            notification.classList.add('show');
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 2000);
+        }
+        
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            generateLineNumbers();
+            Prism.highlightAll();
+        });
+    </script>
+</body>
+</html>

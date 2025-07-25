@@ -1,0 +1,26 @@
+{
+  "What is TypeScript?": {
+    "A superset of JavaScript with static typing": "right",
+    "A new programming language": "wrong",
+    "A JavaScript framework": "wrong",
+    "A CSS preprocessor": "wrong"
+  },
+  "Which command is used to compile TypeScript?": {
+    "tsc": "right",
+    "ts-compile": "wrong",
+    "typescript": "wrong",
+    "compile": "wrong"
+  },
+  "What file extension is used for TypeScript files?": {
+    ".ts": "right",
+    ".typescript": "wrong",
+    ".tsx": "wrong",
+    ".js": "wrong"
+  },
+  "Which keyword is used to define a type in TypeScript?": {
+    "type": "right",
+    "define": "wrong",
+    "typedef": "wrong",
+    "interface": "wrong"
+  }
+}
