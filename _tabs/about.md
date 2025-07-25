@@ -4,17 +4,18 @@ layout: page
 permalink: /about/
 ---
 
-Hi, I'm **Usama Sadiq**, a P---
-
-Thanks for reading. I'm always open to connect, collaborate, or share ideas. 
-
-**📄 [Download My Resume](/assets/resume.pdf)** - Get a comprehensive overview of my experience and skills.
-
-_"Code with clarity. Lead with empathy. Deliver with consistency."_
-
-![Open edX Core Contributor Badge](assets/img/openedx-core-contributor-badge.svg){:style="height:70px; margin-bottom: 1rem;"}l Software Engineer, Open edX Core Contributor, and hands-on Python/Django + DevOps specialist with over 6 years of experience in building and scaling modern web infrastructure.
+Hi, I'm **Usama Sadiq**, a Principal Software Engineer, Open edX Core Contributor, and hands-on Python/Django + DevOps specialist with over 6 years of experience in building and scaling modern web infrastructure.
 
 I bring a unique combination of backend engineering expertise, cloud-native DevOps practices, and open-source leadership to every initiative I work on.
+- 📄 [Download My Resume](/assets/resume.pdf) - Get a comprehensive overview of my experience and skills.
+
+---
+
+## 🌱 My Journey
+
+Coming from a humble background, I began my journey as a factory worker and assistant. With the help of scholarships, mentorship, and community support, I earned my degree in Computer Science from Information Technology University, Lahore.
+
+What started as curiosity became a career of purpose. From freelancing and research internships to leading open-source initiatives and enterprise deployments, I’ve grown by solving real-world problems with code.
 
 ---
 
@@ -74,14 +75,6 @@ Over the years, I’ve played an active role in improving the developer experien
 - **Speaker & Advocate**: Delivered technical talks at Open edX conferences, presenting tools, best practices, and sharing behind-the-scenes of high-impact efforts.
 - **Mentorship & Onboarding**: Helped onboard new contributors by documenting workflows, simplifying tooling, and guiding them through their first PRs.
 - **Standardization & Automation**: Built codemods, scripts, and bots to automate repetitive tasks like PR creation, version bumps, and repository tracking.
-
----
-
-## 🌱 My Journey
-
-Coming from a humble background, I began my journey as a factory worker and assistant. With the help of scholarships, mentorship, and community support, I earned my degree in Computer Science from Information Technology University, Lahore.
-
-What started as curiosity became a career of purpose. From freelancing and research internships to leading open-source initiatives and enterprise deployments, I’ve grown by solving real-world problems with code.
 
 ---
 

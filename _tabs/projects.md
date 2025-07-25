@@ -232,7 +232,7 @@ Welcome to my projects showcase! Here you'll find live demonstrations and detail
   -->
 </div>
 
-## How to Add New Projects
+<!-- ## How to Add New Projects
 
 To add a new project card, simply copy the template above and customize:
 
@@ -241,6 +241,6 @@ To add a new project card, simply copy the template above and customize:
 3. **Title**: Project name
 4. **Description**: Brief, engaging description
 5. **Tech Stack**: Add relevant technology tags
-6. **Actions**: Link to live demo, blog post, or GitHub repo
+6. **Actions**: Link to live demo, blog post, or GitHub repo -->
 
 {% include custom-scripts.html %}
