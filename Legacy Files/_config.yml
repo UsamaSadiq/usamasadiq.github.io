@@ -1,0 +1,44 @@
+title: "Usama Sadiq Portfolio"
+email: usama7274@gmail.com
+description: >-
+  Personal portfolio built with Jekyll.
+baseurl: ""
+url: "https://usamasadiq.github.io"
+
+# Build settings
+remote_theme: mmistakes/minimal-mistakes
+minimal_mistakes_skin: "dark"
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-include-cache
+  - jekyll-archives
+  - jekyll-paginate
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+# Blog settings
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+# Archives
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layout: archive
+  permalinks:
+    category: '/categories/:name/'
+    tag: '/tags/:name/'
+
+search: true
+
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      author: usama
