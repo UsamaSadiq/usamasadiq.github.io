@@ -179,7 +179,7 @@ Explore the complete source code with syntax highlighting and documentation:
 ### Download Options
 - **[📁 View Project Directory](/projects/edx-scraper/)** - Browse all project files
 - **[⬇️ Download Python Script](https://raw.githubusercontent.com/UsamaSadiq/usamasadiq.github.io/main/projects/edx-scraper/edx_course_scrapper.py)** - Direct script download
-- **[📋 Copy to Clipboard](#copy-code)** - Copy code directly from the viewer
+- **📋 Copy to Clipboard** - Copy code directly from the viewer above
 
 ## 🎯 Use Cases
 
