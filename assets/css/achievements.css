@@ -1,0 +1,303 @@
+/* Achievement Badges System CSS
+ * Integrates with Chirpy theme styling conventions
+ */
+
+/* Achievement Cards Enhancement */
+.achievement-card {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border-color);
+  height: 280px; /* Fixed height for consistent grid */
+}
+
+.achievement-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-color: var(--btn-border-color);
+}
+
+.achievement-card .card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.achievement-icon {
+  border-radius: 8px;
+  padding: 4px;
+  background: rgba(var(--bs-primary-rgb), 0.1);
+  transition: background-color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.achievement-card:hover .achievement-icon {
+  background: rgba(var(--bs-primary-rgb), 0.15);
+}
+
+/* Card Content with proper theme colors */
+.achievement-card .card-title {
+  color: var(--heading-color) !important;
+  font-weight: 600;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+}
+
+/* Ensure proper color inheritance in dark mode */
+[data-mode="dark"] .achievement-card .card-title {
+  color: var(--heading-color) !important;
+}
+
+/* Light mode specific override if needed */
+[data-mode="light"] .achievement-card .card-title {
+  color: var(--heading-color) !important;
+}
+
+.achievement-card .card-text {
+  color: var(--text-muted-color) !important;
+  line-height: 1.5;
+  font-size: 0.9rem;
+  flex-grow: 1;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.achievement-card .text-muted {
+  color: var(--text-muted-color) !important;
+  font-size: 0.8rem;
+}
+
+/* Buttons */
+.achievement-card .btn-outline-primary {
+  border-color: var(--btn-border-color);
+  color: var(--link-color);
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.achievement-card .btn-outline-primary:hover {
+  background-color: var(--btn-bg);
+  border-color: var(--btn-border-color);
+  color: var(--btn-color);
+  transform: translateY(-1px);
+}
+
+/* Modal styling */
+.modal-content {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border-color);
+  border-radius: 12px;
+}
+
+.modal-header {
+  border-bottom: 1px solid var(--card-border-color);
+  background-color: var(--card-bg);
+}
+
+.modal-body {
+  background-color: var(--card-bg);
+  color: var(--text-color) !important;
+}
+
+.modal-title {
+  color: var(--heading-color) !important;
+}
+
+.modal .text-muted {
+  color: var(--text-muted-color) !important;
+}
+
+.modal .badge {
+  background-color: var(--label-color);
+  color: var(--card-bg);
+}
+
+/* Modal text content */
+.modal-body p {
+  color: var(--text-color) !important;
+}
+
+.modal-body h6 {
+  color: var(--heading-color) !important;
+}
+
+.modal-body .fs-6 {
+  color: var(--text-color) !important;
+}
+
+.modal-body .mb-4 p {
+  color: var(--text-color) !important;
+}
+
+.modal-body .bg-secondary {
+  background-color: var(--label-color) !important;
+  color: var(--card-bg) !important;
+}
+
+/* Ensure all text in modals uses theme colors */
+.modal * {
+  color: inherit;
+}
+
+.modal-body .mb-0 {
+  color: var(--text-color) !important;
+}
+
+/* Override Bootstrap default colors in modals */
+.modal .text-muted {
+  color: var(--text-muted-color) !important;
+}
+
+.modal h6.text-muted {
+  color: var(--text-muted-color) !important;
+}
+
+/* Category Headers */
+.achievements-container h2 {
+  color: var(--heading-color) !important;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.achievements-container .text-primary {
+  color: var(--prompt-tip-icon-color) !important;
+}
+
+.achievements-container .text-muted {
+  color: var(--text-muted-color) !important;
+}
+
+/* Dark mode enhancements */
+[data-mode="dark"] .achievement-card {
+  background-color: var(--card-bg);
+  border-color: var(--card-border-color);
+}
+
+[data-mode="dark"] .achievement-card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  border-color: rgba(var(--bs-primary-rgb), 0.3);
+}
+
+[data-mode="dark"] .achievement-icon {
+  background: rgba(var(--bs-primary-rgb), 0.2);
+}
+
+[data-mode="dark"] .achievement-card:hover .achievement-icon {
+  background: rgba(var(--bs-primary-rgb), 0.3);
+}
+
+[data-mode="dark"] .modal-content {
+  background-color: var(--card-bg);
+  border-color: var(--card-border-color);
+}
+
+[data-mode="dark"] .modal-header {
+  border-bottom-color: var(--card-border-color);
+}
+
+[data-mode="dark"] .modal-body {
+  color: var(--text-color) !important;
+}
+
+[data-mode="dark"] .modal-body p,
+[data-mode="dark"] .modal-body .fs-6,
+[data-mode="dark"] .modal-body .mb-0 {
+  color: var(--text-color) !important;
+}
+
+[data-mode="dark"] .modal-title {
+  color: var(--heading-color) !important;
+}
+
+[data-mode="dark"] .modal .text-muted {
+  color: var(--text-muted-color) !important;
+}
+
+[data-mode="dark"] .modal .badge {
+  background-color: var(--label-color) !important;
+  color: var(--card-bg) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .achievement-card {
+    height: auto;
+    min-height: 260px;
+  }
+  
+  .achievement-card .d-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .achievement-icon {
+    margin-bottom: 1rem !important;
+    margin-right: 0 !important;
+    align-self: center;
+  }
+  
+  .achievements-container h2 {
+    font-size: 1.5rem;
+  }
+  
+  .modal-dialog {
+    margin: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .achievements-container {
+    padding: 0 0.5rem;
+  }
+  
+  .achievement-card {
+    margin-bottom: 1rem;
+    min-height: 240px;
+  }
+  
+  .achievement-card .card-text {
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+}
+
+/* Animation for better UX */
+.achievement-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger animation for cards */
+.achievement-card:nth-child(1) { animation-delay: 0.1s; }
+.achievement-card:nth-child(2) { animation-delay: 0.2s; }
+.achievement-card:nth-child(3) { animation-delay: 0.3s; }
+.achievement-card:nth-child(4) { animation-delay: 0.4s; }
+.achievement-card:nth-child(5) { animation-delay: 0.5s; }
+.achievement-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* Focus states for accessibility */
+.achievement-card:focus-within {
+  outline: 2px solid var(--btn-border-color);
+  outline-offset: 2px;
+}
+
+.achievement-card .btn:focus {
+  box-shadow: 0 0 0 0.2rem rgba(var(--bs-primary-rgb), 0.25);
+}
