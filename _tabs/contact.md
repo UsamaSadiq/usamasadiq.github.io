@@ -1,8 +1,9 @@
 ---
 layout: page
 title: Contact
-icon: fas fa-envelope
+icon: fas fa-envelope-square
 order: 5
+permalink: /contact/
 ---
 
 I'm always open to discussing new opportunities, interesting projects, or just having a conversation about technology and innovation.

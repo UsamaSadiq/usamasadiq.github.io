@@ -1,0 +1,101 @@
+<div class="sidebar-categories">
+  <h6 class="sidebar-heading">
+    <i class="fas fa-folder-open me-2"></i>Categories
+  </h6>
+  <div class="categories-list">
+    {% assign categories = site.categories | sort %}
+    {% for category in categories limit: 8 %}
+      {% assign posts_count = category[1] | size %}
+      <a href="{{ '/categories/' | append: category[0] | downcase | replace: ' ', '-' | relative_url }}" 
+         class="category-item">
+        <span class="category-name">{{ category[0] | capitalize }}</span>
+        <span class="post-count">{{ posts_count }}</span>
+      </a>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+#sidebar .sidebar-categories {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: var(--sidebar-bg);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+#sidebar .sidebar-categories .sidebar-heading {
+  color: var(--heading-color);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+#sidebar .sidebar-categories .categories-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#sidebar .sidebar-categories .category-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: var(--text-color);
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  font-size: 0.85rem;
+}
+
+#sidebar .sidebar-categories .category-item:hover {
+  background: var(--btn-box-shadow);
+  color: var(--link-color);
+  text-decoration: none;
+  transform: translateX(2px);
+}
+
+#sidebar .sidebar-categories .category-name {
+  flex: 1;
+}
+
+#sidebar .sidebar-categories .post-count {
+  background: var(--label-color);
+  color: var(--sidebar-bg);
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  min-width: 20px;
+  text-align: center;
+}
+
+/* Dark mode adjustments */
+[data-mode="dark"] #sidebar .sidebar-categories {
+  background: var(--sidebar-bg);
+  border-color: var(--main-border-color);
+}
+
+[data-mode="dark"] #sidebar .sidebar-categories .category-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+[data-mode="dark"] #sidebar .sidebar-categories .post-count {
+  background: var(--btn-border-color);
+  color: var(--text-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #sidebar .sidebar-categories {
+    padding: 0.75rem;
+  }
+  
+  #sidebar .sidebar-categories .category-item {
+    font-size: 0.8rem;
+  }
+}
+</style>

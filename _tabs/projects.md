@@ -242,5 +242,3 @@ To add a new project card, simply copy the template above and customize:
 4. **Description**: Brief, engaging description
 5. **Tech Stack**: Add relevant technology tags
 6. **Actions**: Link to live demo, blog post, or GitHub repo -->
-
-{% include custom-scripts.html %}

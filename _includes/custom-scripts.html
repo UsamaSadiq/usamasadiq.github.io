@@ -5,6 +5,9 @@
 <!-- Newsletter Subscription -->
 <script src="{{ '/assets/js/newsletter.js' | relative_url }}" defer></script>
 
+<!-- Sidebar Categories -->
+<script src="{{ '/assets/js/sidebar-categories.js' | relative_url }}" defer></script>
+
 <!-- Contact Form -->
 <link rel="stylesheet" href="{{ '/assets/css/contact.css' | relative_url }}">
 <script src="{{ '/assets/js/contact.js' | relative_url }}" defer></script>
@@ -22,6 +25,18 @@ window.NEWSLETTER_CONFIG = {
     // Enable debug mode (set to false in production)
     debug: {{ site.debug_mode | default: "true" | jsonify }}
 };
+
+// Categories data for sidebar
+window.SITE_CATEGORIES = [
+    {% assign categories = site.categories | sort %}
+    {% for category in categories %}
+    {
+        name: {{ category[0] | capitalize | jsonify }},
+        slug: {{ category[0] | downcase | replace: ' ', '-' | jsonify }},
+        count: {{ category[1] | size }}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+];
 
 // Add Formspree endpoint meta tag dynamically
 document.addEventListener('DOMContentLoaded', function() {
