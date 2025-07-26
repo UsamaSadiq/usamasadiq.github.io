@@ -40,7 +40,7 @@ social:
   email: usama7274@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://linkedin.com/in/meharusama # change to your LinkedIn homepage
+    - https://www.linkedin.com/in/meharusama # change to your LinkedIn homepage
     - https://github.com/usamasadiq # change to your GitHub homepage
 
 # Newsletter Configuration (Environment Variables)

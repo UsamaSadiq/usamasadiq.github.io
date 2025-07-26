@@ -1,18 +1,15 @@
 #  The contact options.
 
 - type: github
-  icon: "fab fa-github"
+  icon: "fa-brands fa-github"
 
-- type: twitter
-  icon: "fa-brands fa-x-twitter"
+- type: linkedin
+  icon: "fa-brands fa-linkedin"
+  url: "https://www.linkedin.com/in/meharusama"
 
 - type: email
   icon: "fas fa-envelope"
   noblank: true # open link in current tab
-
-- type: rss
-  icon: "fas fa-rss"
-  noblank: true
 # Uncomment and complete the url below to enable more contact options
 #
 # - type: mastodon

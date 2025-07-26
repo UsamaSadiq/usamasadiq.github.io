@@ -6,7 +6,7 @@ order: 5
 permalink: /contact/
 ---
 
-I'm always open to discussing new opportunities, interesting projects, or just having a conversation about technology and innovation.
+I'm always open to discuss new opportunities, interesting projects, or just having a conversation about technology and innovation.
 
 ---
 
