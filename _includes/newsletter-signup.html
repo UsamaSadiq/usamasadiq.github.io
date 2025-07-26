@@ -1,0 +1,213 @@
+<!-- Newsletter Subscription Component -->
+<div class="newsletter-signup">
+  <div class="newsletter-header">
+    <h4>📧 Stay Updated</h4>
+    <p>Get notified about new posts, projects, and tech insights.</p>
+  </div>
+  
+  <form class="newsletter-form" id="newsletter-form">
+    <div class="newsletter-input-group">
+      <input 
+        type="email" 
+        id="newsletter-email" 
+        placeholder="Enter your email"
+        required
+        autocomplete="email"
+      >
+      <button type="submit" class="newsletter-btn">
+        <span class="newsletter-btn-text">Subscribe</span>
+        <span class="newsletter-btn-loading" style="display: none;">
+          <i class="fas fa-spinner fa-spin"></i>
+        </span>
+      </button>
+    </div>
+    
+    <div class="newsletter-privacy">
+      <small>
+        <i class="fas fa-shield-alt"></i>
+        No spam, unsubscribe anytime. View our 
+        <a href="#privacy-policy">privacy policy</a>.
+      </small>
+    </div>
+  </form>
+  
+  <div class="newsletter-success" id="newsletter-success" style="display: none;">
+    <i class="fas fa-check-circle"></i>
+    <span>Thanks for subscribing! Check your email to confirm.</span>
+  </div>
+  
+  <div class="newsletter-error" id="newsletter-error" style="display: none;">
+    <i class="fas fa-exclamation-triangle"></i>
+    <span>Something went wrong. Please try again.</span>
+  </div>
+</div>
+
+<style>
+.newsletter-signup {
+  background: var(--main-bg, #fff);
+  border: 1px solid var(--border-color, #e1e5e9);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  transition: box-shadow 0.3s ease;
+}
+
+.newsletter-signup:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.newsletter-header h4 {
+  margin: 0 0 0.5rem 0;
+  color: var(--heading-color, #333);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.newsletter-header p {
+  margin: 0 0 1rem 0;
+  color: var(--text-muted, #6c757d);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.newsletter-input-group {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+#newsletter-email {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color, #e1e5e9);
+  border-radius: 6px;
+  background: var(--main-bg, #fff);
+  color: var(--text-color, #333);
+  font-size: 0.9rem;
+  transition: border-color 0.3s ease;
+}
+
+#newsletter-email:focus {
+  outline: none;
+  border-color: var(--link-color, #2196f3);
+  box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
+}
+
+.newsletter-btn {
+  background: var(--link-color, #2196f3);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  min-width: 100px;
+}
+
+.newsletter-btn:hover {
+  background: var(--link-hover-color, #1976d2);
+  transform: translateY(-1px);
+}
+
+.newsletter-btn:active {
+  transform: translateY(0);
+}
+
+.newsletter-btn:disabled {
+  background: var(--text-muted, #6c757d);
+  cursor: not-allowed;
+  transform: none;
+}
+
+.newsletter-privacy {
+  color: var(--text-muted, #6c757d);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.newsletter-privacy a {
+  color: var(--link-color, #2196f3);
+  text-decoration: none;
+}
+
+.newsletter-privacy a:hover {
+  text-decoration: underline;
+}
+
+.newsletter-success,
+.newsletter-error {
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.newsletter-success {
+  background: rgba(76, 175, 80, 0.1);
+  color: #2e7d32;
+  border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.newsletter-error {
+  background: rgba(244, 67, 54, 0.1);
+  color: #c62828;
+  border: 1px solid rgba(244, 67, 54, 0.3);
+}
+
+/* Dark mode support */
+[data-mode="dark"] .newsletter-signup {
+  background: var(--main-bg);
+  border-color: var(--border-color);
+}
+
+[data-mode="dark"] #newsletter-email {
+  background: var(--main-bg);
+  border-color: var(--border-color);
+  color: var(--text-color);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .newsletter-input-group {
+    flex-direction: column;
+  }
+  
+  .newsletter-btn {
+    width: 100%;
+    min-width: auto;
+  }
+  
+  .newsletter-signup {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+}
+
+/* Compact variant for sidebar */
+.newsletter-signup.compact {
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.newsletter-signup.compact .newsletter-header h4 {
+  font-size: 1rem;
+}
+
+.newsletter-signup.compact .newsletter-header p {
+  font-size: 0.85rem;
+}
+
+.newsletter-signup.compact #newsletter-email,
+.newsletter-signup.compact .newsletter-btn {
+  padding: 0.6rem;
+  font-size: 0.85rem;
+}
+</style>

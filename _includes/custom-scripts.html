@@ -1,3 +1,43 @@
 <!-- Custom Project Enhancements -->
 <link rel="stylesheet" href="{{ '/assets/css/project-styles.css' | relative_url }}">
 <script src="{{ '/assets/js/project-enhancements.js' | relative_url }}" defer></script>
+
+<!-- Newsletter Subscription -->
+<script src="{{ '/assets/js/newsletter.js' | relative_url }}" defer></script>
+
+<!-- Contact Form -->
+<link rel="stylesheet" href="{{ '/assets/css/contact.css' | relative_url }}">
+<script src="{{ '/assets/js/contact.js' | relative_url }}" defer></script>
+
+<!-- Formspree Configuration -->
+<script>
+// Newsletter Backend Configuration
+window.NEWSLETTER_CONFIG = {
+    // Formspree endpoint from environment variable or fallback
+    formspreeEndpoint: '{{ site.formspree_endpoint | default: "" }}',
+    
+    // Backup email for fallback
+    fallbackEmail: '{{ site.email | default: "usama7274@gmail.com" }}',
+    
+    // Enable debug mode (set to false in production)
+    debug: {{ site.debug_mode | default: "true" | jsonify }}
+};
+
+// Add Formspree endpoint meta tag dynamically
+document.addEventListener('DOMContentLoaded', function() {
+    if (window.NEWSLETTER_CONFIG.formspreeEndpoint && 
+        window.NEWSLETTER_CONFIG.formspreeEndpoint.trim() !== '') {
+        
+        const meta = document.createElement('meta');
+        meta.name = 'formspree-endpoint';
+        meta.content = window.NEWSLETTER_CONFIG.formspreeEndpoint;
+        document.head.appendChild(meta);
+        
+        if (window.NEWSLETTER_CONFIG.debug) {
+            console.log('Formspree endpoint configured from environment');
+        }
+    } else if (window.NEWSLETTER_CONFIG.debug) {
+        console.warn('Formspree endpoint not configured. Please set FORMSPREE_ENDPOINT environment variable or add formspree_endpoint to _config.yml');
+    }
+});
+</script>

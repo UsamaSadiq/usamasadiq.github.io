@@ -1,0 +1,73 @@
+/* Contact Page Enhancements - Chirpy Theme Compatible */
+
+/* General card hover effects */
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+/* Light theme card styling */
+[data-mode="light"] .card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Dark theme card styling */
+[data-mode="dark"] .card:hover {
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+/* List group styling */
+.list-group-flush .list-group-item {
+  border: none;
+  padding: 0.5rem 0;
+  background: transparent;
+}
+
+[data-mode="dark"] .list-group-flush .list-group-item {
+  color: #f0f6fc;
+}
+
+.list-group-flush .list-group-item:before {
+  content: "✓";
+  color: #0d6efd;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+[data-mode="dark"] .list-group-flush .list-group-item:before {
+  color: #58a6ff;
+}
+
+/* Alert styling for dark theme */
+[data-mode="dark"] .alert-info {
+  background-color: #0c2d6b;
+  border-color: #1f6feb;
+  color: #58a6ff;
+}
+
+.alert {
+  border-radius: 0.5rem;
+}
+
+/* Text colors for dark theme */
+[data-mode="dark"] h4 {
+  color: #f0f6fc;
+}
+
+[data-mode="dark"] ul li {
+  color: #8b949e;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .row.g-4 {
+    gap: 1rem !important;
+  }
+  
+  h4 {
+    font-size: 1.1rem;
+  }
+}

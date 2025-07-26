@@ -43,6 +43,12 @@ social:
     - https://linkedin.com/in/meharusama # change to your LinkedIn homepage
     - https://github.com/usamasadiq # change to your GitHub homepage
 
+# Newsletter Configuration (Environment Variables)
+# Set FORMSPREE_ENDPOINT environment variable or configure below
+formspree_endpoint: # Will be populated from environment variable
+email: usama7274@gmail.com # Fallback email
+debug_mode: true # Set to false in production
+
 # Site Verification Settings
 webmaster_verifications:
   google: # fill in your Google verification code
