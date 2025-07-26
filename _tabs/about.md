@@ -1,7 +1,7 @@
 ---
-title: Who am I?
-layout: page
-permalink: /about/
+# the default layout is 'page'
+icon: fas fa-info-circle
+order: 4
 ---
 
 Hi, I'm **Usama Sadiq**, a Principal Software Engineer, Open edX Core Contributor, and hands-on Python/Django + DevOps specialist with over 6 years of experience in building and scaling modern web infrastructure.
