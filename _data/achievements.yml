@@ -10,10 +10,7 @@ categories:
       - name: "Open edX Core Contributor"
         icon: "/assets/img/openedx-core-contributor-badge.svg"
         description: "Recognized contributor to the Open edX platform with significant contributions to platform modernization and developer experience improvements"
-        impact: "Led platform-wide upgrades across 10+ major services, modernized Python dependencies, and improved developer onboarding processes that reduced setup time by 60%."
-        date: "2023-2024"
         url: "https://openedx.org/"
-        skills: ["Python", "Django", "React", "Community Leadership"]
         
   - name: "Leadership & Speaking"
     id: "community"
@@ -21,19 +18,14 @@ categories:
     description: "Community leadership and public speaking engagements"
     badges:
       - name: "Open edX Conference Speaker"
-        icon: "fas fa-microphone-alt"
+        icon: "https://logos.openedx.org/open-edx-logo-tag.png"
         description: "Technical presenter at Open edX conferences, sharing tools, best practices, and platform insights"
-        impact: "Delivered presentations to 200+ developers and educators, sharing automation tools and platform insights that were adopted by multiple institutions."
-        date: "2023-2024"
         url: "https://openedx.org/conference/"
-        skills: ["Public Speaking", "Technical Leadership", "Community Building"]
         
       - name: "Mentorship Leader"
-        icon: "fas fa-user-graduate"
+        icon: "/assets/img/mentorship-leader-logo.svg"
         description: "Guided new contributors through onboarding, documentation, and first pull requests"
-        impact: "Mentored 15+ new contributors, created comprehensive onboarding documentation, and established mentorship programs that increased contributor retention by 40%."
-        date: "2022-2024"
-        skills: ["Mentorship", "Documentation", "Developer Experience"]
+        url: "https://openedx.org/"
 
   - name: "Certifications"
     id: "certifications"
@@ -41,12 +33,9 @@ categories:
     description: "Professional certifications and technical qualifications"
     badges:
       - name: "AWS Solutions Architect Associate"
-        icon: "fab fa-aws"
+        icon: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
         description: "Amazon Web Services certified solutions architect with expertise in cloud infrastructure design"
-        impact: "Designed and implemented scalable cloud architectures for enterprise applications, reducing infrastructure costs by 30% while improving system reliability."
-        date: "2024"
         url: "https://aws.amazon.com/certification/"
-        skills: ["AWS", "Cloud Architecture", "Infrastructure Design", "Cost Optimization"]
         
       # - name: "Certified Kubernetes Administrator"
       #   icon: "fas fa-dharmachakra"
