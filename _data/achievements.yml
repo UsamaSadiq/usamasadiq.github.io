@@ -17,42 +17,26 @@ categories:
     icon: "fas fa-microphone-alt"
     description: "Community leadership and public speaking engagements"
     badges:
-      - name: "Open edX Conference Speaker"
+      - name: "Open edX Conference 2024 Speaker"
         icon: "https://logos.openedx.org/open-edx-logo-tag.png"
         description: "Technical presenter at Open edX conferences, sharing tools, best practices, and platform insights"
         url: "https://openedx.org/conference/"
         
-      - name: "Mentorship Leader"
-        icon: "/assets/img/mentorship-leader-logo.svg"
-        description: "Guided new contributors through onboarding, documentation, and first pull requests"
-        url: "https://openedx.org/"
+      # - name: "Mentorship Leader"
+      #   icon: "/assets/img/mentorship-leader-logo.svg"
+      #   description: "Guided new contributors through onboarding, documentation, and first pull requests"
+      #   url: "https://openedx.org/"
 
   - name: "Certifications"
     id: "certifications"
     icon: "fas fa-certificate"
     description: "Professional certifications and technical qualifications"
     badges:
-      - name: "AWS Solutions Architect Associate"
-        icon: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
-        description: "Amazon Web Services certified solutions architect with expertise in cloud infrastructure design"
-        url: "https://aws.amazon.com/certification/"
+      # - name: "AWS Solutions Architect Associate"
+      #   icon: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
+      #   description: "Amazon Web Services certified solutions architect with expertise in cloud infrastructure design"
+      #   url: "https://aws.amazon.com/certification/"
         
-      # - name: "Certified Kubernetes Administrator"
-      #   icon: "fas fa-dharmachakra"
-      #   description: "Kubernetes certified administrator with container orchestration expertise"
-      #   impact: "Successfully migrated legacy applications to Kubernetes clusters, improving deployment speed by 60% and system scalability."
-      #   date: "2023"
-      #   url: "https://www.cncf.io/certification/cka/"
-      #   skills: ["Kubernetes", "Container Orchestration", "DevOps", "Cluster Management"]
-        
-      # - name: "Google Cloud Professional Developer"
-      #   icon: "fab fa-google"
-      #   description: "Google Cloud certified professional developer specializing in cloud-native applications"
-      #   impact: "Built and deployed cloud-native applications serving millions of users with 99.9% uptime and auto-scaling capabilities."
-      #   date: "2023"
-      #   url: "https://cloud.google.com/certification/"
-      #   skills: ["Google Cloud", "Cloud Native", "Microservices", "Auto-scaling"]
-
 # Badge display settings
 settings:
   # Number of badges to show per row on desktop
