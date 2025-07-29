@@ -1,6 +1,6 @@
 /**
  * Newsletter Subscription Handler
- * Handles form submission, validation, and integration with email services
+ * Simple form submission with success message
  */
 
 class NewsletterManager {
@@ -21,12 +21,9 @@ class NewsletterManager {
         
         this.form.addEventListener('submit', this.handleSubmit.bind(this));
         this.emailInput.addEventListener('input', this.clearMessages.bind(this));
-        
-        // Load existing subscription status
-        this.checkSubscriptionStatus();
     }
     
-    async handleSubmit(e) {
+    handleSubmit(e) {
         e.preventDefault();
         
         const email = this.emailInput.value.trim();
@@ -36,56 +33,67 @@ class NewsletterManager {
             return;
         }
         
-        // Check if already subscribed
-        if (this.isAlreadySubscribed(email)) {
-            this.showError('This email is already subscribed.');
-            return;
-        }
-        
+        // Show loading state briefly
         this.setLoading(true);
         
-        try {
-            const success = await this.submitSubscription(email);
-            
-            if (success) {
-                this.showSuccess();
-                this.saveSubscriptionStatus(email);
-                this.form.reset();
-                
-                // Track subscription event
-                this.trackSubscription(email);
-            } else {
-                this.showError('Failed to subscribe. Please try again.');
-            }
-        } catch (error) {
-            console.error('Newsletter subscription error:', error);
-            this.showError('Something went wrong. Please try again later.');
-        } finally {
+        // Show success message after a short delay
+        setTimeout(() => {
             this.setLoading(false);
+            this.showSuccess();
+            this.form.reset();
+        }, 800);
+    }
+    
+    }
+    
+    validateEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+    
+    setLoading(loading) {
+        if (loading) {
+            this.btnText.style.display = 'none';
+            this.btnLoading.style.display = 'inline';
+            this.submitBtn.disabled = true;
+        } else {
+            this.btnText.style.display = 'inline';
+            this.btnLoading.style.display = 'none';
+            this.submitBtn.disabled = false;
         }
     }
     
-    async submitSubscription(email) {
-        // Integration options (choose one based on your preference):
-        
-        // Option 1: Netlify Forms (if hosted on Netlify)
-        if (this.isNetlify()) {
-            return this.submitToNetlify(email);
+    showSuccess(message = 'Thanks for subscribing! Check your email to confirm.') {
+        this.hideMessages();
+        if (this.successMsg && this.successMsg.querySelector('span')) {
+            this.successMsg.querySelector('span').textContent = message;
+            this.successMsg.style.display = 'flex';
+            
+            // Auto-hide after 5 seconds
+            setTimeout(() => this.hideMessages(), 5000);
         }
-        
-        // Option 2: Formspree (popular form service)
-        if (this.hasFormspree()) {
-            return this.submitToFormspree(email);
-        }
-        
-        // Option 3: ConvertKit API (email marketing service)
-        if (this.hasConvertKit()) {
-            return this.submitToConvertKit(email);
-        }
-        
-        // Option 4: Simple mailto fallback
-        return this.submitViaMailto(email);
     }
+    
+    showError(message) {
+        this.hideMessages();
+        if (this.errorMsg && this.errorMsg.querySelector('span')) {
+            this.errorMsg.querySelector('span').textContent = message;
+            this.errorMsg.style.display = 'flex';
+            
+            // Auto-hide after 5 seconds
+            setTimeout(() => this.hideMessages(), 5000);
+        }
+    }
+    
+    hideMessages() {
+        if (this.successMsg) this.successMsg.style.display = 'none';
+        if (this.errorMsg) this.errorMsg.style.display = 'none';
+    }
+    
+    clearMessages() {
+        this.hideMessages();
+    }
+}
     
     async submitToNetlify(email) {
         const formData = new FormData();
@@ -168,8 +176,13 @@ class NewsletterManager {
         const body = encodeURIComponent(`Please add ${email} to the newsletter subscription list.\n\nSubscribed from: ${window.location.href}`);
         const mailtoLink = `mailto:${fallbackEmail}?subject=${subject}&body=${body}`;
         
+        // Show info message about manual process
+        setTimeout(() => {
+            this.showSuccess('Email client opened! Please send the subscription request email.');
+        }, 500);
+        
         window.open(mailtoLink);
-        return true; // Assume success since we can't verify mailto
+        return true; // Return success to trigger the normal success flow
     }
     
     validateEmail(email) {
@@ -212,20 +225,28 @@ class NewsletterManager {
     
     showSuccess(message = 'Thanks for subscribing! Check your email to confirm.') {
         this.hideMessages();
-        this.successMsg.querySelector('span').textContent = message;
-        this.successMsg.style.display = 'flex';
-        
-        // Auto-hide after 5 seconds
-        setTimeout(() => this.hideMessages(), 5000);
+        if (this.successMsg && this.successMsg.querySelector('span')) {
+            this.successMsg.querySelector('span').textContent = message;
+            this.successMsg.style.display = 'flex';
+            
+            // Auto-hide after 5 seconds
+            setTimeout(() => this.hideMessages(), 5000);
+        } else {
+            console.warn('Success message element not found');
+        }
     }
     
     showError(message) {
         this.hideMessages();
-        this.errorMsg.querySelector('span').textContent = message;
-        this.errorMsg.style.display = 'flex';
-        
-        // Auto-hide after 5 seconds
-        setTimeout(() => this.hideMessages(), 5000);
+        if (this.errorMsg && this.errorMsg.querySelector('span')) {
+            this.errorMsg.querySelector('span').textContent = message;
+            this.errorMsg.style.display = 'flex';
+            
+            // Auto-hide after 5 seconds
+            setTimeout(() => this.hideMessages(), 5000);
+        } else {
+            console.warn('Error message element not found');
+        }
     }
     
     hideMessages() {
@@ -284,6 +305,15 @@ class NewsletterManager {
                       window.CONVERTKIT_API_KEY;
         
         return formId && apiKey ? { formId, apiKey } : null;
+    }
+    
+    // Test function for verifying notifications (for development)
+    testNotification(type = 'success') {
+        if (type === 'success') {
+            this.showSuccess('Test: Newsletter subscription successful!');
+        } else {
+            this.showError('Test: Something went wrong!');
+        }
     }
 }
 

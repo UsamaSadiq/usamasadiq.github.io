@@ -1,0 +1,79 @@
+# Achievement Badges Configuration
+# This file defines all achievement badges displayed on the portfolio
+
+categories:
+  - name: "Open Source Contributions"
+    id: "open-source"
+    icon: "fab fa-github"
+    description: "Contributions to open source projects and communities"
+    badges:
+      - name: "Open edX Core Contributor"
+        icon: "/assets/img/openedx-core-contributor-badge.svg"
+        description: "Recognized contributor to the Open edX platform with significant contributions to platform modernization and developer experience improvements"
+        impact: "Led platform-wide upgrades across 10+ major services, modernized Python dependencies, and improved developer onboarding processes that reduced setup time by 60%."
+        date: "2023-2024"
+        url: "https://openedx.org/"
+        skills: ["Python", "Django", "React", "Community Leadership"]
+        
+  - name: "Leadership & Speaking"
+    id: "community"
+    icon: "fas fa-microphone-alt"
+    description: "Community leadership and public speaking engagements"
+    badges:
+      - name: "Open edX Conference Speaker"
+        icon: "fas fa-microphone-alt"
+        description: "Technical presenter at Open edX conferences, sharing tools, best practices, and platform insights"
+        impact: "Delivered presentations to 200+ developers and educators, sharing automation tools and platform insights that were adopted by multiple institutions."
+        date: "2023-2024"
+        url: "https://openedx.org/conference/"
+        skills: ["Public Speaking", "Technical Leadership", "Community Building"]
+        
+      - name: "Mentorship Leader"
+        icon: "fas fa-user-graduate"
+        description: "Guided new contributors through onboarding, documentation, and first pull requests"
+        impact: "Mentored 15+ new contributors, created comprehensive onboarding documentation, and established mentorship programs that increased contributor retention by 40%."
+        date: "2022-2024"
+        skills: ["Mentorship", "Documentation", "Developer Experience"]
+
+  - name: "Certifications"
+    id: "certifications"
+    icon: "fas fa-certificate"
+    description: "Professional certifications and technical qualifications"
+    badges:
+      - name: "AWS Solutions Architect Associate"
+        icon: "fab fa-aws"
+        description: "Amazon Web Services certified solutions architect with expertise in cloud infrastructure design"
+        impact: "Designed and implemented scalable cloud architectures for enterprise applications, reducing infrastructure costs by 30% while improving system reliability."
+        date: "2024"
+        url: "https://aws.amazon.com/certification/"
+        skills: ["AWS", "Cloud Architecture", "Infrastructure Design", "Cost Optimization"]
+        
+      # - name: "Certified Kubernetes Administrator"
+      #   icon: "fas fa-dharmachakra"
+      #   description: "Kubernetes certified administrator with container orchestration expertise"
+      #   impact: "Successfully migrated legacy applications to Kubernetes clusters, improving deployment speed by 60% and system scalability."
+      #   date: "2023"
+      #   url: "https://www.cncf.io/certification/cka/"
+      #   skills: ["Kubernetes", "Container Orchestration", "DevOps", "Cluster Management"]
+        
+      # - name: "Google Cloud Professional Developer"
+      #   icon: "fab fa-google"
+      #   description: "Google Cloud certified professional developer specializing in cloud-native applications"
+      #   impact: "Built and deployed cloud-native applications serving millions of users with 99.9% uptime and auto-scaling capabilities."
+      #   date: "2023"
+      #   url: "https://cloud.google.com/certification/"
+      #   skills: ["Google Cloud", "Cloud Native", "Microservices", "Auto-scaling"]
+
+# Badge display settings
+settings:
+  # Number of badges to show per row on desktop
+  badges_per_row: 3
+  
+  # Show skills tags on badges
+  show_skills: true
+  
+  # Enable hover animations
+  enable_animations: true
+  
+  # Show dates on badges
+  show_dates: true

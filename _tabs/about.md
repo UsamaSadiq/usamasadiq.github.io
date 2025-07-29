@@ -4,7 +4,7 @@ icon: fas fa-info-circle
 order: 1
 ---
 
-Hi, I'm **Usama Sadiq**, a Principal Software Engineer, Open edX Core Contributor, and hands-on Python/Django + DevOps specialist with over 6 years of experience in building and scaling modern web infrastructure.
+Hi, I'm Usama Sadiq, Principal Software Engineer, Open edX Core Contributor, and hands-on Python/Django + DevOps specialist with over 6 years of experience in building and scaling modern web infrastructure.
 
 I bring a unique combination of backend engineering expertise, cloud-native DevOps practices, and open-source leadership to every initiative I work on.
 - 📄 [Download My Resume](/assets/resume.pdf) - Get a comprehensive overview of my experience and skills.
@@ -40,6 +40,34 @@ Technical documentation, mentorship, cross-team collaboration, public speaking, 
 
 ---
 
+## 🏆 Achievements & Recognition
+
+Want to see more of my professional achievements and contributions? Check out my dedicated achievements section:
+
+<div class="d-flex align-items-center gap-3 my-4">
+  <img src="assets/img/openedx-core-contributor-badge.svg" alt="Open edX Core Contributor Badge" style="height:60px;">
+  <div>
+    <h5 class="mb-1">Professional Achievements</h5>
+    <p class="text-muted mb-2">Open source contributions, speaking engagements, and technical leadership</p>
+    <a href="/achievements/" class="btn btn-outline-primary btn-sm">
+      <i class="fas fa-trophy me-1"></i>View All Achievements
+    </a>
+  </div>
+</div>
+
+---
+
+## 👥 Leadership in Open edX
+
+Over the years, I’ve played an active role in improving the developer experience and ecosystem stability for Open edX:
+
+- **Community Leadership**: Championed platform-wide upgrades and modernization projects. Led by example and supported contributors across time zones.
+- **Speaker & Advocate**: Delivered technical talks at Open edX conferences, presenting tools, best practices, and sharing behind-the-scenes of high-impact efforts.
+- **Mentorship & Onboarding**: Helped onboard new contributors by documenting workflows, simplifying tooling, and guiding them through their first PRs.
+- **Standardization & Automation**: Built codemods, scripts, and bots to automate repetitive tasks like PR creation, version bumps, and repository tracking.
+
+---
+
 ## 🔧 Highlight Projects
 
 ### 📊 Real-Time Analytics Dashboard
@@ -67,28 +95,4 @@ Spearheaded the Python 3.12 upgrade for over 10 major services. Updated Dockerfi
 
 ---
 
-## 👥 Leadership in Open edX
-
-Over the years, I’ve played an active role in improving the developer experience and ecosystem stability for Open edX:
-
-- **Community Leadership**: Championed platform-wide upgrades and modernization projects. Led by example and supported contributors across time zones.
-- **Speaker & Advocate**: Delivered technical talks at Open edX conferences, presenting tools, best practices, and sharing behind-the-scenes of high-impact efforts.
-- **Mentorship & Onboarding**: Helped onboard new contributors by documenting workflows, simplifying tooling, and guiding them through their first PRs.
-- **Standardization & Automation**: Built codemods, scripts, and bots to automate repetitive tasks like PR creation, version bumps, and repository tracking.
-
----
-
-## 🌐 Find Me Online
-
-- 🔗 [LinkedIn](https://linkedin.com/in/meharusama)
-- 💻 [GitHub](https://github.com/UsamaSadiq)
-- 📬 [Email](mailto:usama7274@gmail.com)
-- 🌍 [Open edX](https://openedx.org/)
-
----
-
 Thanks for reading. I’m always open to connect, collaborate, or share ideas. 
-
-_"Code with clarity. Lead with empathy. Deliver with consistency."_
-
-![Open edX Core Contributor Badge](assets/img/openedx-core-contributor-badge.svg){:style="height:70px; margin-bottom: 1rem;"}

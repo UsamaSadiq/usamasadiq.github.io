@@ -2,7 +2,7 @@
 layout: page
 title: Newsletter
 icon: fas fa-envelope
-order: 4
+order: 5
 permalink: /newsletter/
 ---
 
