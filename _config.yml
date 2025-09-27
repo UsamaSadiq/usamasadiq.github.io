@@ -154,6 +154,11 @@ pwa:
 
 paginate: 5
 
+# Jekyll build settings
+future: false        # Don't show posts with future dates
+show_drafts: false   # Don't show draft posts
+unpublished: false   # Don't show unpublished posts
+
 # The base URL of your site
 baseurl: "" # the base URL of your site, e.g. "/blog" for GitHub Pages subpath
 
