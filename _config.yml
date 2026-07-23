@@ -16,12 +16,10 @@ timezone: Asia/Karachi
 
 title: Usama Sadiq # the main title
 
-tagline: Open edX Core Contributor (Open edX) | Principal Software Engineer (Arbisoft) # it will display as the subtitle
+tagline: Open edX Core Contributor | Principal Software Engineer at Arbisoft # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  Backend Developer and DevOps Engineer passionate about building scalable systems. 
-  Open edX Core Contributor (Open edX) and Principal Software Engineer (Arbisoft) with expertise in Python, 
-  Django, AWS, and modern web infrastructure.
+  Principal Software Engineer with 7+ years across Python, Django, AWS, and large-scale platform engineering. Open edX Core Contributor running ecosystem-wide upgrades across 150+ repositories. Senior Cloud Architect for a commercial AI document validation platform on AWS.
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
