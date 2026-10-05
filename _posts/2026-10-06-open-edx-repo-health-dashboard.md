@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "From 150 Repositories to a Health Dashboard: A 6-Year Retrospective"
+title: "From Upgrade Tickets to a Health Dashboard: Six Years of Open edX Maintenance"
 date: 2026-10-06 04:00:00 +0500
 categories: [open-source, openedx, ossvitals]
 tags: [openedx, repo-health, github-actions, python, django, maintenance, dashboard, core-contributor]
