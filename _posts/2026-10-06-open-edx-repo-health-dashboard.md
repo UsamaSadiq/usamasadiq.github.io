@@ -5,7 +5,9 @@ date: 2026-10-06 04:00:00 +0500
 categories: [open-source, openedx, ossvitals]
 tags: [openedx, repo-health, github-actions, python, django, maintenance, dashboard, core-contributor]
 description: "How a narrow upgrade ticket turned into an ecosystem-wide maintenance practice, and how that practice became a public health dashboard for every Open edX repository."
-image: /assets/img/openedx-core-contributor-badge.svg
+image:
+  path: /assets/img/posts/openedx-core-contributor-banner.svg
+  alt: Open edX Core Contributor badge
 pin: true
 ---
 
