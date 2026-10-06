@@ -6,8 +6,8 @@ categories: [open-source, openedx, ossvitals]
 tags: [openedx, repo-health, github-actions, python, django, maintenance, dashboard, core-contributor]
 description: "How a narrow upgrade ticket turned into an ecosystem-wide maintenance practice, and how that practice became a public health dashboard for every Open edX repository."
 image:
-  path: /assets/img/posts/openedx-core-contributor-banner.png
-  alt: Open edX Core Contributor badge
+  path: /assets/img/posts/ossvitals-hero.jpg
+  alt: The OSSvitals overview page, snapshot of 5 October 2026, showing organisation grade B and 53 repositories graded A
 pin: true
 ---
 
@@ -176,9 +176,6 @@ Some of the most useful work was fixing what the checks had been getting wrong.
 
 [OSSvitals](https://ossvitals.org), the dashboard itself, is the layer on top. Its design is deliberately boring.
 
-![The OSSvitals overview page showing the organisation grade, grade mix and the repositories needing attention](/assets/img/posts/ossvitals-overview.jpg){: width="1485" height="812" .shadow }
-_The Overview page at openedx.ossvitals.org, snapshot of 5 October 2026._
-
 A small workflow in wg-maintenance calls the shared repo health workflow in the organisation's `.github` repository every morning. That workflow clones every repository, runs the checks and commits the CSV. A second workflow in the dashboard repository reads that CSV, computes scores and commits the result as JSON. The site at openedx.ossvitals.org is a static build that bundles those pre-computed files at deploy time, so the browser loads nothing else. There are no API calls at runtime, so the dashboard never hits a rate limit, never leaks a token and can be rebuilt by anyone from public data ([#4](https://github.com/UsamaSadiq/OSSvitals/pull/4), [#5](https://github.com/UsamaSadiq/OSSvitals/pull/5)). A third workflow opens an issue if the data goes stale ([#20](https://github.com/UsamaSadiq/OSSvitals/pull/20)).
 
 <figure class="repo-health-figure">
@@ -215,7 +212,10 @@ html[data-mode="light"] .acc{fill:#2a78d6}html[data-mode="light"] .accs{stroke:#
 <figcaption>Scoring.yaml in UsamaSadiq/OSSvitals, config version 2.0</figcaption>
 </figure>
 
-The view the working group actually uses is [At Risk](https://openedx.ossvitals.org/at_risk) ([#7](https://github.com/UsamaSadiq/OSSvitals/pull/7)). It joins ownership with activity, so you can see which production repositories are owned by nobody or by a single person and are getting worse. The [Maintenance page](https://openedx.ossvitals.org/maintenance) tracks the upgrade jobs, migration waves and redundant bot PRs ([#11](https://github.com/UsamaSadiq/OSSvitals/pull/11), [#13](https://github.com/UsamaSadiq/OSSvitals/pull/13)) hoping to track all upcoming work in the future in similar method too.
+The view the working group actually uses is [At Risk](https://openedx.ossvitals.org/at_risk) ([#7](https://github.com/UsamaSadiq/OSSvitals/pull/7)). It joins ownership with activity, so you can see which production repositories are owned by nobody or by a single person and are getting worse. The [Upgrades page](https://openedx.ossvitals.org/maintenance) tracks the upgrade jobs, migration waves and redundant bot PRs ([#11](https://github.com/UsamaSadiq/OSSvitals/pull/11), [#13](https://github.com/UsamaSadiq/OSSvitals/pull/13)) hoping to track all upcoming work in the future in similar method too.
+
+![The Upgrades page on its wave tab, showing 42 of 106 repositories done on the Python packaging migration, with the open migration pull requests listed oldest first](/assets/img/posts/ossvitals-upgrades-wave.jpg){: width="1485" height="812" .shadow }
+_The Upgrades page, wave tab, tracking one migration across 106 repositories. Snapshot of 5 October 2026._
 
 <figure class="repo-health-figure">
 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 760 250' role='img' aria-label='126 of 169 repositories grade A or B' style='max-width:100%;height:auto;display:block;margin:1.5rem auto'><style>
