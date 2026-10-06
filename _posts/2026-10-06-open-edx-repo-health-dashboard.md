@@ -39,7 +39,9 @@ Open edX is not one codebase. It is [more than 150 repositories](https://github.
 
 The first time this bit me was 25 September 2020. A new release of `importlib-metadata` broke the Python 3.5 and 3.6 test matrix in every repository that still supported those versions. There was no list of which repositories those were. I knew because I had touched them. I pinned the package to 1.7.0 in six repositories that day, [django-config-models](https://github.com/openedx/django-config-models/pull/90), [edx-cookiecutters](https://github.com/openedx/edx-cookiecutters/pull/66), [edx-repo-health](https://github.com/openedx/edx-repo-health/pull/59), [edx-rest-api-client](https://github.com/openedx/edx-rest-api-client/pull/100), [opaque-keys](https://github.com/openedx/opaque-keys/pull/147) and [pytest-repo-health](https://github.com/openedx/pytest-repo-health/pull/50), with [xss-utils](https://github.com/openedx/xss-utils/pull/11) following five days later. Two months later the same package broke tox and virtualenv, and the pin changed to `<3.0` in [another](https://github.com/openedx/edx-repo-health/pull/91) [round](https://github.com/openedx/pytest-repo-health/pull/63).
 
-That was the pattern for the next two years. Fix a failure in one repository, then go find the same failure everywhere else by memory. The fix was never the hard part. Knowing where to apply it was.
+That was the pattern for the next two years. Fix a failure in one repository, then go find the same failure everywhere else by memory.
+
+> **The fix was never the hard part. Knowing where to apply it was.**
 
 The sharper version of the problem is that fixes propagate too. In May 2022 pip 22.1 broke pip-tools, which broke the automated requirements upgrade job in every repository at once. I pinned `pip<22.1` in the common constraints file in edx-lint ([#258](https://github.com/openedx/edx-lint/pull/258)), which every repository consumes, and removed it three days later once pip-tools shipped a fix ([#261](https://github.com/openedx/edx-lint/pull/261)). One line in one file changed what more than a hundred repositories installed that week. Nobody had a picture of that blast radius either.
 
@@ -49,7 +51,11 @@ The question I could not let go of was simple. Why did a change in one place pro
 
 None of what follows was a solo effort. Arbisoft staffed two teams for edX, and later 2U, under one engineering manager, Jeremy Bowman: bom-squad for the backend and bom-frontend for the micro-frontends. After Jeremy Bowman left 2U, Jeremy Ristau, Director of Engineering at 2U and a member of the Open edX Technical Oversight Committee, led both teams until Arbisoft's engagement with 2U ended. The [2U commitment to the Core Contributor programme](https://openedx.atlassian.net/wiki/spaces/COMM/pages/3216900524) still describes the arrangement: "the BOM team to assist in maintenance and upgrades of the Open edX core system which are defined and/or coordinated by the Maintainers WG". Inside bom-squad the lead role moved over the years, from Awais Qureshi to Aarif to Muhammad Soban Javed, while Muhammad Abdullah Waheed led bom-frontend. I never held the lead title at Arbisoft, but in practice I took charge of the major epics within the team: running each effort end to end, writing the tracking issues and codemods, and being the person the wider Open edX community worked with on them. In the later years that also meant mentoring newer teammates, interviewing candidates and setting up the team's on-call rotation. In a January 2025 LinkedIn recommendation, Jeremy Ristau wrote that I had "delivered on my expectations of a team lead role", leading three workstreams across Open edX in parallel: the Node 20 upgrade, the Python 3.11 upgrade and the devstack deprecation ([public-engineering #247](https://github.com/openedx/public-engineering/issues/247) is the public DEPR ticket for it). My share of each wave is stated below, because the point of this post is the map, not the headcount.
 
-**Automating the upgrades themselves.** The method came from Jeremy Bowman, who managed the Architecture team at edX and later presented it at DjangoCon US 2021 as [Herding Ponies: Coordinating and Automating Django Upgrades Across 100+ Repositories](https://youtu.be/ny-3AaNHbbs): codemods for the breaking changes, scripts that rewrite tox and CI configs, dependency support tracking, and a schedule across dozens of repositories. Our squad built and ran that tooling. In March 2021 I added a GitHub Action to edx-repo-health that opened requirements upgrade PRs automatically ([#129](https://github.com/openedx/edx-repo-health/pull/129)), and over 2021 I wrote codemods in repo-tools that applied the same change across every repository that needed it: removing `python_2_unicode_compatible` ([#185](https://github.com/openedx/repo-tools/pull/185)) and adding new Django 3.2 settings ([#196](https://github.com/openedx/repo-tools/pull/196)). A codemod is a map of the ecosystem written as code. To write one you have to know which repositories it applies to.
+**Automating the upgrades themselves.** The method came from Jeremy Bowman, who managed the Architecture team at edX and later presented it at DjangoCon US 2021 as [Herding Ponies: Coordinating and Automating Django Upgrades Across 100+ Repositories](https://youtu.be/ny-3AaNHbbs): codemods for the breaking changes, scripts that rewrite tox and CI configs, dependency support tracking, and a schedule across dozens of repositories. Our squad built and ran that tooling. In March 2021 I added a GitHub Action to edx-repo-health that opened requirements upgrade PRs automatically ([#129](https://github.com/openedx/edx-repo-health/pull/129)), and over 2021 I wrote codemods in repo-tools that applied the same change across every repository that needed it: removing `python_2_unicode_compatible` ([#185](https://github.com/openedx/repo-tools/pull/185)) and adding new Django 3.2 settings ([#196](https://github.com/openedx/repo-tools/pull/196)).
+
+> **A codemod is a map of the ecosystem written as code.**
+
+To write one you have to know which repositories it applies to.
 
 **Django 3.2.** The 2021 Django 3.2 wave was mostly other people's work. M. Zulqarnain and Jawayria led it with thirteen PRs each, Muhammad Soban Javed added nine ([xblock-google-drive](https://github.com/openedx/xblock-google-drive/pull/43)), Awais Qureshi five and Aarif three. I did seven, among them [xqueue](https://github.com/openedx/xqueue/pull/827), [xblock-sdk](https://github.com/openedx/xblock-sdk/pull/208) and [codejail](https://github.com/openedx/codejail/pull/120), and Zulqarnain closed the wave with the [post-upgrade cleanup in edx-platform](https://github.com/openedx/openedx-platform/pull/29069). The year before, the Python 3.8 wave had been carried largely by Luis Moreno and ericfab179 at eduNEXT with Awais and Aarif.
 
@@ -113,7 +119,9 @@ Jeremy also built the first dashboard. In 2023, from a hackathon project, he tur
 
 In July 2024 Muhammad Soban Javed and I presented the result at the Open edX Conference in Stellenbosch, South Africa, the first time the conference was held in Africa. The talk, [Elevating Open edX Development: The Repo Health Dashboard](https://www.youtube.com/watch?v=kbt5n8Erv-s), walked through the checks, the daily job and the per-repository reports. Arbisoft's [conference write-up](https://arbisoft.com/blogs/reflecting-on-the-open-ed-x-conference-2024-edly-by-arbisoft-takes-center-stage) has a summary.
 
-The talk was well received, and nothing much happened afterwards. That is worth being honest about. A CSV in a repository is not a tool anyone opens in the morning.
+The talk was well received, and nothing much happened afterwards. That is worth being honest about.
+
+> **A CSV in a repository is not a tool anyone opens in the morning.**
 
 The checks did not stand still in those years, though. Zubair Shakoor added the Python dependency dashboard script ([#462](https://github.com/openedx/edx-repo-health/pull/462)), Syed Ali Abbas Zaidi fixed the Renovate check ([#425](https://github.com/openedx/edx-repo-health/pull/425)), Hunia Fatima added the pinned dependency count check ([#532](https://github.com/openedx/edx-repo-health/pull/532)), Salman Nawaz retired the openedx.yaml check, and Muhammad Tayyab Tahir Qureshi brought the plugin to Python 3.12 ([pytest-repo-health #340](https://github.com/openedx/pytest-repo-health/pull/340)). Ned Batchelder, Tim McCormack and Feanil Patel reviewed and maintained throughout, and Feanil has kept pytest-repo-health releasing, most recently 4.0 in 2026. Jeremy's last contribution was a check proposal in January 2024.
 
@@ -221,7 +229,9 @@ html[data-mode="light"] .acc{fill:#2a78d6}html[data-mode="light"] .accs{stroke:#
 <figcaption>PR history collected by the dashboard's maintenance collector. 7,206 PRs, June 2024 to September 2026</figcaption>
 </figure>
 
-The history also showed what the community does well. In two weeks of May 2026, a single campaign [pinned GitHub Actions to full commit SHAs](https://github.com/search?q=org%3Aopenedx+is%3Apr+%22pin+GitHub+Actions+workflows+to+full+commit+SHAs%22+created%3A2026-05-01..2026-05-31&type=pullrequests) in 123 repositories, with 119 merged. Switching builds to `ubuntu-latest` went through 75 repositories with every PR merged. The ecosystem can move fast when someone draws the map first.
+The history also showed what the community does well. In two weeks of May 2026, a single campaign [pinned GitHub Actions to full commit SHAs](https://github.com/search?q=org%3Aopenedx+is%3Apr+%22pin+GitHub+Actions+workflows+to+full+commit+SHAs%22+created%3A2026-05-01..2026-05-31&type=pullrequests) in 123 repositories, with 119 merged. Switching builds to `ubuntu-latest` went through 75 repositories with every PR merged.
+
+> **The ecosystem can move fast when someone draws the map first.**
 
 And it showed that several of the original checks had stopped carrying information. A check that returns the same value for 99 percent of repositories is not a health signal, it is a historical record. The dashboard now flags those for the working group to retire ([#23](https://github.com/UsamaSadiq/org-health-dashboard/pull/23)).
 
@@ -229,11 +239,20 @@ And it showed that several of the original checks had stopped carrying informati
 
 Three things, mostly.
 
-**Make the system legible before you automate it.** Every codemod, every bulk migration and every dashboard view started with a list of which repositories were affected. The tooling was only ever a way to stop keeping that list in my head.
+> **Make the system legible before you automate it.**
+{: .prompt-tip }
 
-**Automate at the scale of the ecosystem, not the ticket.** Fixing one repository is boring. Understanding why 150 repositories fail in correlated ways, and building something so they stop, is the kind of work I will stay up for. The same instinct carried into the work I have done since: owning the infrastructure for a commercial AI document validation platform on AWS, and building Model Context Protocol servers that expose production tools to AI assistants. In both cases the first job was the same. Draw the map.
+Every codemod, every bulk migration and every dashboard view started with a list of which repositories were affected. The tooling was only ever a way to stop keeping that list in my head.
 
-**Stewardship is recognised differently from output.** [Core Contributor](https://openedx.atlassian.net/wiki/spaces/COMM/pages/3156344833) status in Open edX is given for looking after the commons, not for pull request counts. The pull requests were how I learned where the commons was.
+> **Automate at the scale of the ecosystem, not the ticket.**
+{: .prompt-tip }
+
+Fixing one repository is boring. Understanding why 150 repositories fail in correlated ways, and building something so they stop, is the kind of work I will stay up for. The same instinct carried into the work I have done since: owning the infrastructure for a commercial AI document validation platform on AWS, and building Model Context Protocol servers that expose production tools to AI assistants. In both cases the first job was the same. Draw the map.
+
+> **Stewardship is recognised differently from output.**
+{: .prompt-tip }
+
+[Core Contributor](https://openedx.atlassian.net/wiki/spaces/COMM/pages/3156344833) status in Open edX is given for looking after the commons, not for pull request counts. The pull requests were how I learned where the commons was.
 
 The dashboard is live at [openedx.ossvitals.org](https://openedx.ossvitals.org), the project page is at [ossvitals.org](https://ossvitals.org), the source is at [UsamaSadiq/OSSvitals](https://github.com/UsamaSadiq/OSSvitals), and the checks are at [openedx/edx-repo-health](https://github.com/openedx/edx-repo-health). If you maintain an Open edX repository and your grade surprises you, the How Scoring Works page will tell you exactly why, and I would like to hear whether it is wrong.
 
