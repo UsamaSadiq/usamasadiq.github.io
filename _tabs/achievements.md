@@ -7,6 +7,7 @@ order: 5
 
 <div class="achievements-container">
   {% for category in site.data.achievements.categories %}
+  {% if category.badges.size > 0 %}
   <section class="mb-5">
     <!-- Category Header -->
     <div class="d-flex align-items-center mb-4">
@@ -30,6 +31,7 @@ order: 5
       {% endfor %}
     </div>
   </section>
+  {% endif %}
   {% endfor %}
 </div>
 
