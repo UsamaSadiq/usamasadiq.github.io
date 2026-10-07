@@ -343,6 +343,28 @@ A selection of work I have led or owned, organized by impact. The flagship Open 
 
 </div>
 
+<div class="section-heading">Internal Tooling</div>
+<div class="projects-grid">
+
+  <div class="project-card">
+    <div class="project-status">Internal</div>
+    <div class="project-header">
+      <div class="project-icon">🧰</div>
+      <h3 class="project-title">Agent Skills for Engineering Admin</h3>
+    </div>
+    <p class="project-description">
+      Authored a toolkit of Claude Agent Skills that automates recurring engineering paperwork, such as drafting self-reviews and reconstructing daily time logs from existing work history across chat, source control, email and ticketing. Built to the open Agent Skills standard and usable in Claude Code, Cowork and Cursor. Private to the organisation, so there is no public link.
+    </p>
+    <div class="project-tech">
+      <span class="tech-tag">Claude Skills</span>
+      <span class="tech-tag">MCP</span>
+      <span class="tech-tag">Automation</span>
+      <span class="tech-tag">Developer Productivity</span>
+    </div>
+  </div>
+
+</div>
+
 <div class="section-heading">Side Projects</div>
 <div class="projects-grid">
 
