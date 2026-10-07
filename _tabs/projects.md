@@ -1,7 +1,7 @@
 ---
 # the default layout is 'page'
 icon: fas fa-code
-order: 3
+order: 2
 ---
 
 <style>
@@ -181,24 +181,32 @@ A selection of work I have led or owned, organized by impact. The flagship Open 
 <div class="section-heading">Open edX Ecosystem</div>
 <div class="projects-grid">
 
-  <div class="project-card">
+  <div class="project-card" style="grid-column: 1 / -1;">
     <div class="project-status project-status-flag">Flagship</div>
     <div class="project-header">
       <div class="project-icon">📈</div>
-      <h3 class="project-title">Open edX Org Health Dashboard</h3>
+      <h3 class="project-title">OSSvitals: Open edX Repo Health Dashboard</h3>
     </div>
     <p class="project-description">
-      A real-time dashboard aggregating CI/CD status, dependency compliance, Django upgrade progress, and contribution trends across 150+ Open edX repositories. Presented at Open edX Conference 2024.
+      A public dashboard that grades every repository in the Open edX GitHub organisation on nine health metrics, every day, with every weight and threshold published. I rebuilt the Repo Health checks and built the hosted dashboard on top of them. Repo Health itself was started by Jeremy Bowman and the edX Architecture team, and the upgrade waves behind it were carried by the Arbisoft BOM squad.
     </p>
+    <ul>
+      <li><strong>Problem:</strong> more than 150 repositories upgrade in step, but the map of how they depend on each other lived in people's heads.</li>
+      <li><strong>Design:</strong> three GitHub Actions workflows (run checks, compute scores, flag stale data) feeding a static site. No runtime API calls, so no rate limits and no tokens in the browser.</li>
+      <li><strong>Finding:</strong> the first thing it showed was that more than half of the automated upgrade bot's pull requests were closed without merging.</li>
+      <li><strong>Views:</strong> overview and grades, At Risk, Upgrades by migration wave, and a redundant PR view for the Maintenance Working Group.</li>
+      <li><strong>Talk:</strong> co-presented the original Repo Health Dashboard at Open edX Conference 2024 with Muhammad Soban Javed.</li>
+    </ul>
     <div class="project-tech">
       <span class="tech-tag">Python</span>
-      <span class="tech-tag">Pandas</span>
-      <span class="tech-tag">AWS Lambda</span>
-      <span class="tech-tag">S3</span>
+      <span class="tech-tag">pytest</span>
       <span class="tech-tag">GitHub Actions</span>
+      <span class="tech-tag">Static site</span>
     </div>
     <div class="project-actions">
-      <a href="https://github.com/UsamaSadiq/org-health-dashboard" class="project-btn project-btn-primary" target="_blank" rel="noopener">💻 View Source</a>
+      <a href="https://openedx.ossvitals.org" class="project-btn project-btn-primary" target="_blank" rel="noopener">🚀 Live Dashboard</a>
+      <a href="/posts/open-edx-repo-health-dashboard/" class="project-btn project-btn-secondary">📖 Read the Story</a>
+      <a href="https://github.com/UsamaSadiq/OSSvitals" class="project-btn project-btn-secondary" target="_blank" rel="noopener">💻 Source</a>
     </div>
   </div>
 
@@ -208,7 +216,7 @@ A selection of work I have led or owned, organized by impact. The flagship Open 
       <h3 class="project-title">Python 3.12 Platform Upgrade</h3>
     </div>
     <p class="project-description">
-      Led the Python 3.12 migration across 10+ critical Open edX services. Audited dependencies, submitted upstream patches, rebuilt Docker images, and coordinated staggered rollouts across distributed teams.
+      Coordinated the Python 3.12 migration across Open edX and upgraded ten services myself. Audited dependencies, submitted upstream patches, rebuilt Docker images, and coordinated staggered rollouts across distributed teams.
     </p>
     <div class="project-tech">
       <span class="tech-tag">Python 3.12</span>
@@ -224,7 +232,7 @@ A selection of work I have led or owned, organized by impact. The flagship Open 
       <h3 class="project-title">Django Ecosystem Upgrade</h3>
     </div>
     <p class="project-description">
-      Coordinated the Django 4.2 upgrade across 150+ Open edX repositories. Built reusable codemods, refactored dozens of PRs from community contributors, and established a baseline version matrix with automated progress tracking.
+      Part of the Arbisoft squad that carried the Django 3.2 and 4.2 upgrades across Open edX. Wrote reusable codemods and repo-tools scripts, and did thirteen of the Django 4.2 PRs in a wave shared across the team.
     </p>
     <div class="project-tech">
       <span class="tech-tag">Django 4.2</span>
@@ -257,7 +265,7 @@ A selection of work I have led or owned, organized by impact. The flagship Open 
 <div class="projects-grid">
 
   <div class="project-card">
-    <div class="project-status project-status-flag">Flagship</div>
+    <div class="project-status project-status-flag">Featured</div>
     <div class="project-header">
       <div class="project-icon">☁️</div>
       <h3 class="project-title">Commercial AI Document Validation Platform</h3>
@@ -275,45 +283,13 @@ A selection of work I have led or owned, organized by impact. The flagship Open 
     </div>
   </div>
 
-  <div class="project-card">
-    <div class="project-header">
-      <div class="project-icon">📊</div>
-      <h3 class="project-title">Real-Time Analytics Dashboard</h3>
-    </div>
-    <p class="project-description">
-      Architected a real-time analytics system integrating RESTful APIs, Pandas for transformation, and AWS Lambda for compute. CloudWatch monitoring and custom metrics for operational visibility.
-    </p>
-    <div class="project-tech">
-      <span class="tech-tag">AWS Lambda</span>
-      <span class="tech-tag">Python</span>
-      <span class="tech-tag">Pandas</span>
-      <span class="tech-tag">CloudWatch</span>
-    </div>
-  </div>
-
-  <div class="project-card">
-    <div class="project-header">
-      <div class="project-icon">🌐</div>
-      <h3 class="project-title">Serverless Data Pipeline</h3>
-    </div>
-    <p class="project-description">
-      Event-driven data pipeline using AWS Lambda, S3, and Secrets Manager with Pandas-based transformation. Authored modular Lambda functions reusable across Open edX monitoring and data ingestion.
-    </p>
-    <div class="project-tech">
-      <span class="tech-tag">AWS Lambda</span>
-      <span class="tech-tag">S3</span>
-      <span class="tech-tag">Secrets Manager</span>
-      <span class="tech-tag">Pandas</span>
-    </div>
-  </div>
-
 </div>
 
 <div class="section-heading">Concurrent Open Source: Pressingly</div>
 <div class="projects-grid">
 
   <div class="project-card">
-    <div class="project-status project-status-flag">Flagship</div>
+    <div class="project-status project-status-flag">Featured</div>
     <div class="project-header">
       <div class="project-icon">🔐</div>
       <h3 class="project-title">mpass-auth-proxy</h3>

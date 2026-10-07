@@ -29,7 +29,7 @@ categories:
     badges:
       - name: "Open edX Conference 2024 Speaker"
         icon: "https://logos.openedx.org/open-edx-logo-tag.png"
-        description: "Presented the Repo Health Dashboard at Open edX Conference 2024, sharing tooling and best practices for ecosystem-wide modernization"
+        description: "Co-presented the Repo Health Dashboard (now OSSvitals) at Open edX Conference 2024 in Stellenbosch with Muhammad Soban Javed, sharing tooling and best practices for ecosystem-wide modernization"
         url: "https://openedx.org/conference/"
 
       - name: "Open edX Working Group Participant"
