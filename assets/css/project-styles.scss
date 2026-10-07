@@ -268,25 +268,6 @@
     line-height: 1.55;
 }
 
-.ossvitals-hero__facts {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin: 0 0 1.25rem;
-    padding: 0;
-    list-style: none;
-}
-
-.ossvitals-hero__facts li {
-    margin: 0;
-    padding: 0.25rem 0.75rem;
-    border-radius: 16px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    background: var(--hero-chip-bg, #f3f4f6);
-    color: var(--hero-chip-color, #374151);
-}
-
 .ossvitals-hero__actions {
     display: flex;
     flex-wrap: wrap;
@@ -337,13 +318,71 @@
     --hero-bg: #1e1e1e;
     --hero-border: #343a46;
     --hero-accent: #8fa4f3;
-    --hero-chip-bg: #313244;
-    --hero-chip-color: #cdd6f4;
 }
 
 @media (max-width: 768px) {
     .ossvitals-hero {
         grid-template-columns: 1fr;
         padding: 1.25rem;
+    }
+}
+
+/* Shared chip list (hero facts, skills strip) */
+.chip-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0 0 1.25rem;
+    padding: 0;
+    list-style: none;
+}
+
+.chip-list li {
+    margin: 0;
+    padding: 0.25rem 0.75rem;
+    border-radius: 16px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    background: var(--chip-bg, #f3f4f6);
+    color: var(--chip-color, #374151);
+}
+
+[data-mode="dark"] .chip-list {
+    --chip-bg: #313244;
+    --chip-color: #cdd6f4;
+}
+
+.chip-list li a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: rgba(102, 126, 234, 0.6);
+}
+
+/* Skills strip */
+.skills-strip {
+    margin: 1rem 0 1.5rem;
+}
+
+.skills-strip__row {
+    margin-bottom: 0.25rem;
+}
+
+.skills-strip__label {
+    margin: 0 0 0.35rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    opacity: 0.75;
+}
+
+.skills-strip .chip-list {
+    margin-bottom: 0.9rem;
+}
+
+/* Let an odd last card fill the row instead of leaving a gap */
+@media (min-width: 769px) {
+    .projects-grid > .project-highlight-card:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
     }
 }

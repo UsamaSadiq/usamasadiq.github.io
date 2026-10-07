@@ -262,7 +262,7 @@ A selection of work I have led or owned, organized by impact. The flagship Open 
 </div>
 
 <div class="section-heading">Current Work: Pressingly FOSS</div>
-<p>Building AI-powered open-source application stacks that replace enterprise software for small and medium businesses. The work centers on identity, AI tooling and release engineering across the bundle.</p>
+<p>Moneta is Pressingly's self-hosted bundle of open-source applications (Outline, Plane, Penpot, SurfSense, Twenty CRM) that replaces enterprise software for small and medium businesses. My work centers on identity, AI tooling, deployment topology and release engineering across the bundle.</p>
 <div class="projects-grid">
 
   <div class="project-card">

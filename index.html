@@ -15,7 +15,7 @@ layout: page
 <p class="ossvitals-hero__eyebrow">Featured project</p>
 <h2>OSSvitals: a public health dashboard for every Open edX repository</h2>
 <p>Six years of upgrade work across 150+ repositories showed that the hard part was never the fix, it was knowing where to apply it. I rebuilt the Repo Health checks and built OSSvitals, the public dashboard on top of them. The first thing it showed: more than half of the upgrade bot's pull requests were noise.</p>
-<ul class="ossvitals-hero__facts">
+<ul class="chip-list">
 <li>169 repositories</li>
 <li>9 scored metrics</li>
 <li>Graded daily</li>
@@ -41,12 +41,12 @@ layout: page
 <div class="projects-grid">
 
 <div class="project-highlight-card">
-<h3>🔐 Pressingly FOSS: AI-Powered Open-Source Stacks for SMBs</h3>
-<p>Currently building open-source application stacks that replace enterprise software for small and medium businesses.</p>
+<h3>🔐 Pressingly Moneta: AI-Powered Open-Source Stacks for SMBs</h3>
+<p>Currently building Moneta, a self-hosted bundle of open-source applications (Outline, Plane, Penpot, SurfSense, Twenty CRM) that replaces enterprise software for small and medium businesses.</p>
 <ul>
 <li>Built mpass-auth-proxy, the single sign-on layer across Twenty, Plane, Outline, Penpot and SurfSense.</li>
 <li>Shipped MCP servers for SurfSense, Plane and Outline so AI tools can work with them directly.</li>
-<li>Implemented the foss-sandbox to foss-main promotion pipeline for releases across the bundle.</li>
+<li>Designed the Docker Compose and GKE with ArgoCD deployment topology, with branch-based promotion from foss-sandbox to foss-main.</li>
 </ul>
 </div>
 
@@ -76,55 +76,45 @@ layout: page
 
 <hr>
 
-<h2>🛠️ Technical & Soft Skills</h2>
+<h2>Skills and Tools</h2>
+
+<div class="skills-strip">
+<div class="skills-strip__row">
+<p class="skills-strip__label">Languages and frameworks</p>
+<ul class="chip-list"><li>Python</li><li>Django</li><li>Django REST Framework</li><li>React</li><li>TypeScript</li></ul>
+</div>
+<div class="skills-strip__row">
+<p class="skills-strip__label">CI/CD and automation</p>
+<ul class="chip-list"><li>GitHub Actions</li><li>GoCD</li><li>Jenkins</li><li>ArgoCD</li><li>Ansible</li><li>pytest</li><li>Codemods</li></ul>
+</div>
+<div class="skills-strip__row">
+<p class="skills-strip__label">Cloud and containers</p>
+<ul class="chip-list"><li>AWS (Lambda, ECS, EKS, RDS, S3)</li><li>GCP (GKE)</li><li>Docker</li><li>Kubernetes</li></ul>
+</div>
+<div class="skills-strip__row">
+<p class="skills-strip__label">Observability</p>
+<ul class="chip-list"><li>Datadog</li><li>Splunk</li><li>New Relic</li><li>CloudWatch</li></ul>
+</div>
+<div class="skills-strip__row">
+<p class="skills-strip__label">Identity and AI tooling</p>
+<ul class="chip-list"><li>OAuth and OpenID Connect</li><li>Cognito</li><li>MCP</li><li>Claude Agent Skills</li></ul>
+</div>
+<div class="skills-strip__row">
+<p class="skills-strip__label">Beyond code</p>
+<ul class="chip-list"><li><a href="https://www.youtube.com/watch?v=kbt5n8Erv-s" target="_blank" rel="noopener">Conference speaker</a></li><li><a href="{{ '/achievements/' | relative_url }}">Mentoring</a></li><li><a href="{{ '/blogs/' | relative_url }}">Technical writing</a></li><li><a href="{{ '/achievements/' | relative_url }}">Open-source maintainership</a></li></ul>
+</div>
+</div>
 
 <div class="projects-grid">
 
 <div class="project-highlight-card">
-<h3>💻 Languages & Frameworks</h3>
+<h3>🎓 Six Years of Open edX</h3>
+<p>Where most of these tools were used day to day.</p>
 <ul>
-<li>Python</li>
-<li>Django (advanced ORM, class-based views, signals, middleware)</li>
-<li>Django REST Framework</li>
-<li>Pandas</li>
-<li>NumPy</li>
-<li>React.js</li>
-</ul>
-</div>
-
-<div class="project-highlight-card">
-<h3>☁️ Cloud & DevOps</h3>
-<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0;">
-<ul style="margin: 0;">
-<li>Docker</li>
-<li>GitHub Actions</li>
-<li>Kubernetes</li>
-<li>AWS (Lambda, ECS, EKS, RDS, Aurora, S3, CloudWatch, IAM, Secrets Manager)</li>
-</ul>
-<ul style="margin: 0;">
-<li>ArgoCD</li>
-<li>Jenkins</li>
-<li>GoCD</li>
-<li>Ansible</li>
-</ul>
-<ul style="margin: 0;">
-<li>Datadog</li>
-<li>Splunk</li>
-<li>NewRelic</li>
-<li>MCP (Model Context Protocol)</li>
-</ul>
-</div>
-</div>
-
-<div class="project-highlight-card">
-<h3>🤝 Soft Skills</h3>
-<ul>
-<li>Technical documentation and writing</li>
-<li>Mentorship and succession planning</li>
-<li>Cross-team collaboration across time zones</li>
-<li>Public speaking and conference presentations</li>
-<li>Project leadership and ecosystem governance</li>
-<li>Community engagement and contributor onboarding</li>
+<li>Owned production deployments for edX and 2U with GoCD (AMI deploy and rollback for core services), and led the knowledge-transfer handover to the incoming vendor team.</li>
+<li>Migrated CI from Jenkins to GitHub Actions, with self-hosted autoscaling Kubernetes runners.</li>
+<li>Worked through the logging move from Splunk to Datadog after 2U acquired edX, and ran internal New Relic sessions.</li>
+<li>Delivered platform migrations (Elasticsearch to OpenSearch, translation API v2 to v3, GitHub-sourced dependencies to PyPI) and the Python 3.8 to 3.12 and Django LTS upgrades with reusable codemods.</li>
 </ul>
 </div>
 
