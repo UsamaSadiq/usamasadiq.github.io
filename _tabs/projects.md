@@ -261,31 +261,8 @@ A selection of work I have led or owned, organized by impact. The flagship Open 
 
 </div>
 
-<div class="section-heading">Cloud and Platform</div>
-<div class="projects-grid">
-
-  <div class="project-card">
-    <div class="project-status project-status-flag">Featured</div>
-    <div class="project-header">
-      <div class="project-icon">☁️</div>
-      <h3 class="project-title">Commercial AI Document Validation Platform</h3>
-    </div>
-    <p class="project-description">
-      Senior Cloud Architect and DevOps Lead for a cloud-native AWS-based AI document validation system (client name private). Owns infrastructure topology, multi-environment CI/CD, and AWS service selection. The live bridge to the MLOps trajectory.
-    </p>
-    <div class="project-tech">
-      <span class="tech-tag">AWS Lambda</span>
-      <span class="tech-tag">RDS</span>
-      <span class="tech-tag">Aurora</span>
-      <span class="tech-tag">ECS</span>
-      <span class="tech-tag">Docker</span>
-      <span class="tech-tag">CI/CD</span>
-    </div>
-  </div>
-
-</div>
-
-<div class="section-heading">Concurrent Open Source: Pressingly</div>
+<div class="section-heading">Current Work: Pressingly FOSS</div>
+<p>Building AI-powered open-source application stacks that replace enterprise software for small and medium businesses. The work centers on identity, AI tooling and release engineering across the bundle.</p>
 <div class="projects-grid">
 
   <div class="project-card">
@@ -337,6 +314,30 @@ A selection of work I have led or owned, organized by impact. The flagship Open 
       <span class="tech-tag">CI/CD</span>
       <span class="tech-tag">GitHub Actions</span>
       <span class="tech-tag">Release Engineering</span>
+    </div>
+  </div>
+
+</div>
+
+<div class="section-heading">Past Engagement: Cloud and Platform</div>
+<div class="projects-grid">
+
+  <div class="project-card">
+    <div class="project-status">Completed</div>
+    <div class="project-header">
+      <div class="project-icon">☁️</div>
+      <h3 class="project-title">Commercial AI Document Validation Platform</h3>
+    </div>
+    <p class="project-description">
+      Was Senior Cloud Architect and DevOps Lead for a cloud-native AWS-based AI document validation system (client name private). Owned infrastructure topology, multi-environment CI/CD, and AWS service selection.
+    </p>
+    <div class="project-tech">
+      <span class="tech-tag">AWS Lambda</span>
+      <span class="tech-tag">RDS</span>
+      <span class="tech-tag">Aurora</span>
+      <span class="tech-tag">ECS</span>
+      <span class="tech-tag">Docker</span>
+      <span class="tech-tag">CI/CD</span>
     </div>
   </div>
 
