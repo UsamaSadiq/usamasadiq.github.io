@@ -13,6 +13,7 @@ I'm happiest talking to people who care about keeping open-source platforms heal
 - [**Email:** usama7274@gmail.com](mailto:usama7274@gmail.com)
 - [**LinkedIn:** linkedin.com/in/meharusama](https://www.linkedin.com/in/meharusama)
 - [**GitHub:** github.com/UsamaSadiq](https://github.com/UsamaSadiq)
+- [**Resume:** View on Google Docs](https://docs.google.com/document/d/17rln3W5w10YwTMr0CMOXySdKFRD0eIekDjcaMsVHiH0/edit?usp=sharing)
 
 ## Where and when
 
