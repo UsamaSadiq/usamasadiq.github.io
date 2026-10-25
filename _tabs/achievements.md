@@ -2,7 +2,7 @@
 layout: page
 title: Achievements
 icon: fas fa-trophy
-order: 5
+order: 6
 ---
 
 <div class="achievements-container">

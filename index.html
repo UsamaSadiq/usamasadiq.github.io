@@ -4,7 +4,9 @@ layout: page
 
 <link rel="stylesheet" href="{{ '/assets/css/project-styles.css' | relative_url }}">
 
-<p>Hi, I'm a Principal Software Engineer at <a href="https://www.arbisoft.com" target="_blank" rel="noopener">Arbisoft</a> and an <a href="https://openedx.org/" target="_blank" rel="noopener">Open edX</a> Core Contributor. I joined the Open edX maintenance team in 2020 and have spent six years keeping 150+ repositories upgradeable: Django and Python migrations, the move to GitHub Actions, and the tooling behind the OSSvitals dashboard. Alongside that, I'm building AI-powered open-source application stacks under Pressingly FOSS that replace enterprise software for small and medium businesses.</p>
+<p>Hi, I'm an open-source maintainer and a Principal Software Engineer at <a href="https://www.arbisoft.com" target="_blank" rel="noopener">Arbisoft</a>. I've been an <a href="https://openedx.org/" target="_blank" rel="noopener">Open edX</a> Core Contributor since 2019 and joined its maintenance team in 2020; six years of keeping 150+ repositories upgradeable: Django and Python migrations, the move to GitHub Actions, and the tooling that became <a href="https://ossvitals.org" target="_blank" rel="noopener">OSSvitals</a>. Alongside that, I'm building AI-powered open-source application stacks under Pressingly FOSS that replace enterprise software for small and medium businesses.</p>
+
+<p>By the numbers: 678 merged pull requests across 95 Open edX repositories, 4,400+ pull requests reviewed, and named maintainer of <a href="{{ '/maintaining/' | relative_url }}">five Open edX packages</a>.</p>
 
 <ul>
 <li>📄 <a href="https://docs.google.com/document/d/17rln3W5w10YwTMr0CMOXySdKFRD0eIekDjcaMsVHiH0/edit?usp=sharing" target="_blank" rel="noopener">View my resume</a></li>
@@ -13,24 +15,27 @@ layout: page
 <section class="ossvitals-hero">
 <div>
 <p class="ossvitals-hero__eyebrow">Featured project</p>
-<h2>OSSvitals: a public health dashboard for every Open edX repository</h2>
-<p>Six years of upgrade work across 150+ repositories showed that the hard part was never the fix, it was knowing where to apply it. I rebuilt the Repo Health checks and built OSSvitals, the public dashboard on top of them. The first thing it showed: more than half of the upgrade bot's pull requests were noise.</p>
+<h2>OSSvitals: repository health for open-source organizations, graded daily</h2>
+<p>Six years of upgrade work across 150+ repositories showed that the hard part was never the fix, it was knowing where to apply it. I rebuilt the Repo Health checks and built OSSvitals on top of them: a published scoring method and one dashboard per organization. Open edX, with 169 repositories, was the first tenant; Moneta is the second. The first thing it showed: more than half of the upgrade bot's pull requests were noise.</p>
 <ul class="chip-list">
-<li>169 repositories</li>
+<li>2 tenants</li>
+<li>169 Open edX repositories</li>
 <li>9 scored metrics</li>
 <li>Graded daily</li>
 <li>Weights and thresholds published</li>
+<li>Read-only MCP endpoint</li>
 </ul>
 <div class="ossvitals-hero__actions">
-<a class="ossvitals-hero__btn ossvitals-hero__btn--primary" href="https://openedx.ossvitals.org" target="_blank" rel="noopener">Live dashboard</a>
+<a class="ossvitals-hero__btn ossvitals-hero__btn--primary" href="https://ossvitals.org" target="_blank" rel="noopener">ossvitals.org</a>
+<a class="ossvitals-hero__btn" href="https://openedx.ossvitals.org" target="_blank" rel="noopener">Open edX dashboard</a>
 <a class="ossvitals-hero__btn" href="{{ '/posts/open-edx-repo-health-dashboard/' | relative_url }}">Read the story</a>
 <a class="ossvitals-hero__btn" href="https://github.com/UsamaSadiq/OSSvitals" target="_blank" rel="noopener">Source</a>
 </div>
 <p class="ossvitals-hero__credit">Repo Health was started by Jeremy Bowman and the edX Architecture team. Co-presented at Open edX Conference 2024 with Muhammad Soban Javed.</p>
 </div>
 <figure class="ossvitals-hero__media">
-<a href="https://openedx.ossvitals.org" target="_blank" rel="noopener"><img src="{{ '/assets/img/posts/ossvitals-hero.jpg' | relative_url }}" alt="OSSvitals overview page showing the organisation grade and repository grade distribution" loading="lazy"></a>
-<figcaption>Overview page, snapshot of 5 October 2026</figcaption>
+<a href="https://openedx.ossvitals.org" target="_blank" rel="noopener"><img src="{{ '/assets/img/posts/ossvitals-hero.jpg' | relative_url }}" alt="OSSvitals overview page for the Open edX tenant showing the organisation grade and repository grade distribution" loading="lazy"></a>
+<figcaption>Open edX tenant, overview page, snapshot of 5 October 2026</figcaption>
 </figure>
 </section>
 
@@ -101,7 +106,7 @@ layout: page
 </div>
 <div class="skills-strip__row">
 <p class="skills-strip__label">Beyond code</p>
-<ul class="chip-list"><li><a href="https://www.youtube.com/watch?v=kbt5n8Erv-s" target="_blank" rel="noopener">Conference speaker</a></li><li><a href="{{ '/achievements/' | relative_url }}">Mentoring</a></li><li><a href="{{ '/blogs/' | relative_url }}">Technical writing</a></li><li><a href="{{ '/achievements/' | relative_url }}">Open-source maintainership</a></li></ul>
+<ul class="chip-list"><li><a href="{{ '/talks/' | relative_url }}">Conference speaker</a></li><li><a href="{{ '/achievements/' | relative_url }}">Mentoring</a></li><li><a href="{{ '/blogs/' | relative_url }}">Technical writing</a></li><li><a href="{{ '/maintaining/' | relative_url }}">Open-source maintainership</a></li></ul>
 </div>
 </div>
 

@@ -4,7 +4,7 @@ title: "Flashmaster - Interactive Learning Application"
 date: 2025-06-15 10:00:00 +0000
 categories: [projects, frontend]
 tags: [react, typescript, javascript, learning, flashcards]
-pin: true
+pin: false
 ---
 
 ## Overview

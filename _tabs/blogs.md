@@ -1,7 +1,7 @@
 ---
 layout: home
 icon: fas fa-blog
-order: 4
+order: 5
 ---
 
 # 📝 Blog Posts

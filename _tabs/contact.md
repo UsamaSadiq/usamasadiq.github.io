@@ -2,11 +2,11 @@
 layout: page
 title: Contact
 icon: fas fa-envelope-square
-order: 3
+order: 7
 permalink: /contact/
 ---
 
-I'm happiest talking to people who care about keeping open-source platforms healthy. That means Open edX maintenance and upgrade tooling, dashboards like [OSSvitals](https://openedx.ossvitals.org), and open-source stacks that small businesses can run themselves, like Moneta. If you're working on something similar, or want to invite me to speak or write about repo health, write to me. If you're hiring, or just curious about the work, say hello too.
+I'm happiest talking to people who care about keeping open-source platforms healthy. That means Open edX maintenance and upgrade tooling, dashboards like [OSSvitals](https://ossvitals.org), and open-source stacks that small businesses can run themselves, like Moneta. If you're working on something similar, or want to invite me to speak or write about repo health, write to me. If you're hiring, or just curious about the work, say hello too.
 
 ## Get in touch
 

@@ -4,7 +4,7 @@ title: "edX Institution Course Scraper - Web Scraping with Selenium"
 date: 2025-06-14 09:00:00 +0000
 categories: [projects, python]
 tags: [python, selenium, web-scraping, automation, data-extraction, beautifulsoup]
-pin: true
+pin: false
 ---
 
 ## Overview

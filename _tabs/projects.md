@@ -176,7 +176,7 @@ order: 2
 
 # My Projects
 
-A selection of work I have led or owned, organized by impact. The flagship Open edX and cloud work below reflects my day-to-day engineering. Side projects are kept at the bottom.
+A selection of work I have led or owned, organized by impact. The flagship Open edX and cloud work below reflects my day-to-day engineering. Side projects are kept at the bottom. For the packages I maintain, see [Maintaining](/maintaining/); for talks, see [Talks](/talks/).
 
 <div class="section-heading">Open edX Ecosystem</div>
 <div class="projects-grid">
@@ -185,28 +185,52 @@ A selection of work I have led or owned, organized by impact. The flagship Open 
     <div class="project-status project-status-flag">Flagship</div>
     <div class="project-header">
       <div class="project-icon">📈</div>
-      <h3 class="project-title">OSSvitals: Open edX Repo Health Dashboard</h3>
+      <h3 class="project-title">OSSvitals: repository health for open-source organizations</h3>
     </div>
     <p class="project-description">
-      A public dashboard that grades every repository in the Open edX GitHub organisation on nine health metrics, every day, with every weight and threshold published. I rebuilt the Repo Health checks and built the hosted dashboard on top of them. Repo Health itself was started by Jeremy Bowman and the edX Architecture team, and the upgrade waves behind it were carried by the Arbisoft BOM squad.
+      A public dashboard that grades every repository in a GitHub organisation on nine health metrics, every day, with every weight and threshold published. Each organisation is a tenant with its own scoring configuration. Open edX, with 169 repositories, was the first tenant; Moneta, a drift tracker for Pressingly's forks, is the second. I rebuilt the Open edX Repo Health checks and built OSSvitals on top of them. Repo Health itself was started by Jeremy Bowman and the edX Architecture team, and the upgrade waves behind it were carried by the Arbisoft BOM squad.
     </p>
     <ul>
       <li><strong>Problem:</strong> more than 150 repositories upgrade in step, but the map of how they depend on each other lived in people's heads.</li>
       <li><strong>Design:</strong> three GitHub Actions workflows (run checks, compute scores, flag stale data) feeding a static site. No runtime API calls, so no rate limits and no tokens in the browser.</li>
       <li><strong>Finding:</strong> the first thing it showed was that more than half of the automated upgrade bot's pull requests were closed without merging.</li>
       <li><strong>Views:</strong> overview and grades, At Risk, Upgrades by migration wave, and a redundant PR view for the Maintenance Working Group.</li>
-      <li><strong>Talk:</strong> co-presented the original Repo Health Dashboard at Open edX Conference 2024 with Muhammad Soban Javed.</li>
+      <li><strong>Agents:</strong> the same data is served read-only over the Model Context Protocol at <code>mcp.ossvitals.org</code>, with a Claude Code skill that turns one failing check into one validated draft PR.</li>
+      <li><strong>Talk:</strong> co-presented the original Repo Health Dashboard at Open edX Conference 2024 with Muhammad Soban Javed; presented the OSSvitals toolkit at AI Tinkerers Lahore in October 2026.</li>
     </ul>
     <div class="project-tech">
       <span class="tech-tag">Python</span>
+      <span class="tech-tag">TypeScript</span>
       <span class="tech-tag">pytest</span>
       <span class="tech-tag">GitHub Actions</span>
-      <span class="tech-tag">Static site</span>
+      <span class="tech-tag">Cloudflare</span>
+      <span class="tech-tag">MCP</span>
     </div>
     <div class="project-actions">
-      <a href="https://openedx.ossvitals.org" class="project-btn project-btn-primary" target="_blank" rel="noopener">🚀 Live Dashboard</a>
+      <a href="https://ossvitals.org" class="project-btn project-btn-primary" target="_blank" rel="noopener">🚀 ossvitals.org</a>
+      <a href="https://openedx.ossvitals.org" class="project-btn project-btn-secondary" target="_blank" rel="noopener">📊 Open edX Dashboard</a>
       <a href="/posts/open-edx-repo-health-dashboard/" class="project-btn project-btn-secondary">📖 Read the Story</a>
       <a href="https://github.com/UsamaSadiq/OSSvitals" class="project-btn project-btn-secondary" target="_blank" rel="noopener">💻 Source</a>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="project-header">
+      <div class="project-icon">📨</div>
+      <h3 class="project-title">Open edX Event-Bus External Grading</h3>
+    </div>
+    <p class="project-description">
+      Technical lead on the Axim-funded (FC-73) move of external grading from XQueue HTTP polling to Open edX event-bus signals. Took over a stalled cross-organisation effort, shipped the backward-compatible signals, viewsets and tests in edx-submissions, released in the Ulmo release and published to PyPI, and wrote the testing guide that community members used to validate it independently.
+    </p>
+    <div class="project-tech">
+      <span class="tech-tag">Python</span>
+      <span class="tech-tag">Django</span>
+      <span class="tech-tag">Open edX Events</span>
+      <span class="tech-tag">Kafka</span>
+    </div>
+    <div class="project-actions">
+      <a href="https://github.com/openedx/edx-submissions/pull/319" class="project-btn project-btn-primary" target="_blank" rel="noopener">🔀 Merged PR</a>
+      <a href="https://pypi.org/project/edx-submissions/" class="project-btn project-btn-secondary" target="_blank" rel="noopener">📦 On PyPI</a>
     </div>
   </div>
 
@@ -296,9 +320,6 @@ A selection of work I have led or owned, organized by impact. The flagship Open 
       <span class="tech-tag">Python</span>
       <span class="tech-tag">OAuth</span>
       <span class="tech-tag">AI Tooling</span>
-    </div>
-    <div class="project-actions">
-      <a href="https://github.com/UsamaSadiq/surfsense-mcp-server" class="project-btn project-btn-secondary" target="_blank" rel="noopener">SurfSense MCP</a>
     </div>
   </div>
 
