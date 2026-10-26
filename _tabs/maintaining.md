@@ -25,3 +25,13 @@ Beyond the packages above, most of my open-source time goes to maintenance that 
 - Travis CI, Jenkins and CircleCI to GitHub Actions migrations, with self-hosted autoscaling runners on EKS
 - 678 merged pull requests across 95 `openedx` repositories and 4,400+ pull requests reviewed
 - Member of the Open edX Maintenance Working Group and the edx-platform Working Group
+
+## Upstream, outside Open edX
+
+Fixes that the upgrade work surfaced in the wider Python ecosystem, and reports from running open-source apps in production:
+
+- [tox](https://github.com/tox-dev/tox/pull/1682) and [virtualenv](https://github.com/pypa/virtualenv/pull/1953): `importlib-metadata` constraints (2020)
+- [algoliasearch-django](https://github.com/algolia/algoliasearch-django/pull/316) and [django-cache-memoize](https://github.com/peterbe/django-cache-memoize/pull/51): Django 3.2 test matrices (2021)
+- [swagger2rst](https://github.com/Arello-Mobile/swagger2rst/pull/11): PyYAML `FullLoader` fix (2021)
+- [python-cloudflare](https://github.com/cloudflare/python-cloudflare/pull/156): drop the `future` dependency (2023)
+- [Penpot](https://github.com/penpot/penpot/issues/12622): backend database pool default regression, reported (2026)
