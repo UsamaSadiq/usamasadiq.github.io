@@ -28,7 +28,7 @@ Beyond the packages above, most of my open-source time goes to maintenance that 
 
 ## Upstream, outside Open edX
 
-Fixes that the upgrade work surfaced in the wider Python ecosystem, and reports from running open-source apps in production:
+Fixes that the upgrade work surfaced in the wider Python ecosystem, and reports from running open-source apps in production. The full list, including open issues and pull requests awaiting review, is on a [public GitHub project board](https://github.com/users/UsamaSadiq/projects/1) that updates as they merge:
 
 - [tox](https://github.com/tox-dev/tox/pull/1682) and [virtualenv](https://github.com/pypa/virtualenv/pull/1953): `importlib-metadata` constraints (2020)
 - [algoliasearch-django](https://github.com/algolia/algoliasearch-django/pull/316) and [django-cache-memoize](https://github.com/peterbe/django-cache-memoize/pull/51): Django 3.2 test matrices (2021)
