@@ -24,6 +24,7 @@ Beyond the packages above, most of my open-source time goes to maintenance that 
 - Python 3.8 to 3.12 and Django 3.2 to 4.2 to 5.2 upgrades across 150+ Open edX repositories, with reusable codemods
 - Travis CI, Jenkins and CircleCI to GitHub Actions migrations, with self-hosted autoscaling runners on EKS
 - 678 merged pull requests across 95 `openedx` repositories and 4,400+ pull requests reviewed
+- eMudhra CA key-compromise response (October 2026): drove the certifi / uv / pip upgrade across every backend Open edX repository, 118 pull requests in 82 repositories, with security releases ready within 48 hours of disclosure
 - Member of the Open edX Maintenance Working Group and the edx-platform Working Group
 
 ## Upstream, outside Open edX
