@@ -7,6 +7,10 @@
   icon: "fa-brands fa-linkedin"
   url: "https://www.linkedin.com/in/meharusama"
 
+- type: dev
+  icon: "fa-brands fa-dev"
+  url: "https://dev.to/mehar_usama_6"
+
 - type: email
   icon: "fas fa-envelope"
   noblank: true # open link in current tab
