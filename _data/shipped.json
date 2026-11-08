@@ -1,0 +1,351 @@
+{
+  "generated_on": "2026-11-08",
+  "merged_by_month": [
+    {
+      "merged": 16,
+      "month": "2026-11"
+    },
+    {
+      "merged": 77,
+      "month": "2026-10"
+    },
+    {
+      "merged": 35,
+      "month": "2026-09"
+    },
+    {
+      "merged": 2,
+      "month": "2026-08"
+    },
+    {
+      "merged": 5,
+      "month": "2026-07"
+    },
+    {
+      "merged": 7,
+      "month": "2026-06"
+    },
+    {
+      "merged": 1,
+      "month": "2026-05"
+    },
+    {
+      "merged": 12,
+      "month": "2026-04"
+    },
+    {
+      "merged": 1,
+      "month": "2026-01"
+    },
+    {
+      "merged": 5,
+      "month": "2025-12"
+    },
+    {
+      "merged": 2,
+      "month": "2025-11"
+    }
+  ],
+  "recent": [
+    {
+      "merged": "2026-11-06",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "fix(fleet): judge advisories against upstream release tags and flag foreign version ranges",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/112"
+    },
+    {
+      "merged": "2026-11-05",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "feat(web): turn the platform page into a leadership summary",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/111"
+    },
+    {
+      "merged": "2026-11-05",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "feat(web): add status badges, toned tiles and a shared filter bar",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/110"
+    },
+    {
+      "merged": "2026-11-05",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "feat(web): tidy page structure and keep navigation reachable",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/109"
+    },
+    {
+      "merged": "2026-11-05",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "feat(web): give tables a header band and a title bar",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/108"
+    },
+    {
+      "merged": "2026-11-05",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "fix(platform): publish withdrawn deprecations in the platform view",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/107"
+    },
+    {
+      "merged": "2026-11-05",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "feat(platform): add an in-brief summary to the platform page",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/106"
+    },
+    {
+      "merged": "2026-11-05",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "feat(platform): add upgrade cost per named release",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/105"
+    },
+    {
+      "merged": "2026-11-05",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "feat(platform): add extension points per named release",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/104"
+    },
+    {
+      "merged": "2026-11-05",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "feat(platform): add stability trends from the platform's git history",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/103"
+    },
+    {
+      "merged": "2026-11-04",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "feat(tenants): serve private tenants behind cloudflare access",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/101"
+    },
+    {
+      "merged": "2026-11-04",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "feat(fleet): track pins, third-party dependencies and per-app owners",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/102"
+    },
+    {
+      "merged": "2026-11-02",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "feat(health): read generic config sections from health kind defaults",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/100"
+    },
+    {
+      "merged": "2026-11-02",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "feat(health): turn maintenance collectors on per tenant",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/99"
+    },
+    {
+      "merged": "2026-11-02",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "feat(health): publish meta pages from health kind defaults",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/98"
+    },
+    {
+      "merged": "2026-11-02",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "ci(health): run build-scores and collect-maintenance per health tenant",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/97"
+    },
+    {
+      "merged": "2026-10-31",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "feat(mcp): expose carried patches and upgrade risk for fleet apps",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/96"
+    },
+    {
+      "merged": "2026-10-31",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "refactor(web): parameterise the health tenant by org",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/95"
+    },
+    {
+      "merged": "2026-10-31",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "ci(data): schema-check every tenant's views before the r2 upload",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/94"
+    },
+    {
+      "merged": "2026-10-31",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "fix(fleet): forecast conflicts against the app's release line",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/93"
+    },
+    {
+      "merged": "2026-10-31",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "fix(fleet): count advisories since the upstream code we ship on the commits basis",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/92"
+    },
+    {
+      "merged": "2026-10-31",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "feat(fleet): add EPSS scores to known exploited advisories",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/91"
+    },
+    {
+      "merged": "2026-10-31",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "feat(fleet): show upstream contributor concentration and release cadence",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/90"
+    },
+    {
+      "merged": "2026-10-31",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "feat(fleet): flag migration clashes and breaking release notes before a sync",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/89"
+    },
+    {
+      "merged": "2026-10-31",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "feat(fleet): show which of our patches upstream already has",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/88"
+    },
+    {
+      "merged": "2026-10-31",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "feat(fleet): flag upstream advisories in CISA's known exploited catalog",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/87"
+    },
+    {
+      "merged": "2026-10-31",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "feat(fleet): watch upstream licence files for changes",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/86"
+    },
+    {
+      "merged": "2026-10-31",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "feat(web): add the fleet signals panel and gate pages on the manifest",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/85"
+    },
+    {
+      "merged": "2026-10-31",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "feat(fleet): publish exact signal surfaces, settings and status rules in the manifest",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/84"
+    },
+    {
+      "merged": "2026-10-31",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "feat(fleet): register tenants from one index and collect every fleet org",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/83"
+    },
+    {
+      "merged": "2026-10-31",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "refactor(fleet): turn moneta into a reusable fleet kind with per-tenant signals",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/82"
+    },
+    {
+      "merged": "2026-10-31",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "feat(moneta): judge fork status by upstream release gap",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/81"
+    },
+    {
+      "merged": "2026-10-27",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "feat: add the favicon and social preview image to every site",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/80"
+    },
+    {
+      "merged": "2026-10-27",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "feat(maintenance): serve data from r2 and refresh changed repos between daily runs",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/74"
+    },
+    {
+      "merged": "2026-10-27",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "feat: add feedback links for dashboards and mcp, and a dashboard request form",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/79"
+    },
+    {
+      "merged": "2026-10-25",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "fix: sign bulletins and issue bodies with the tenant's branding",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/78"
+    },
+    {
+      "merged": "2026-10-25",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "docs: make contributing, privacy, config and runbook docs tenant-neutral",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/77"
+    },
+    {
+      "merged": "2026-10-25",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "docs: title the readme as OSSvitals, not an Open edX tool",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/76"
+    },
+    {
+      "merged": "2026-10-22",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "feat: link upgrades repo names to github and hide empty redundant tab",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/73"
+    },
+    {
+      "merged": "2026-10-22",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "feat: track uv 0.13.4 and pip 26.2.2 campaigns",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/72"
+    },
+    {
+      "merged": "2026-10-21",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "ci: refresh the certifi campaign hourly until 2026-10-23",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/71"
+    },
+    {
+      "merged": "2026-10-21",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "feat: track package upgrade campaigns on the upgrades page",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/70"
+    },
+    {
+      "merged": "2026-10-21",
+      "repo": "arbisoft/session-portal-frontend",
+      "title": "fix(deps): sync package-lock with package.json",
+      "url": "https://github.com/arbisoft/session-portal-frontend/pull/214"
+    },
+    {
+      "merged": "2026-10-20",
+      "repo": "arbisoft/session-portal-backend",
+      "title": "chore: promote stage to main (django 5.2 and dependency updates)",
+      "url": "https://github.com/arbisoft/session-portal-backend/pull/84"
+    },
+    {
+      "merged": "2026-10-20",
+      "repo": "arbisoft/session-portal-backend",
+      "title": "chore: promote dev to stage (django 5.2 and dependency updates)",
+      "url": "https://github.com/arbisoft/session-portal-backend/pull/83"
+    },
+    {
+      "merged": "2026-10-20",
+      "repo": "arbisoft/session-portal-backend",
+      "title": "chore(deps): bump remaining backend dependencies",
+      "url": "https://github.com/arbisoft/session-portal-backend/pull/82"
+    },
+    {
+      "merged": "2026-10-20",
+      "repo": "arbisoft/session-portal-backend",
+      "title": "chore(deps): bump django ecosystem packages for django 5.2",
+      "url": "https://github.com/arbisoft/session-portal-backend/pull/81"
+    },
+    {
+      "merged": "2026-10-20",
+      "repo": "arbisoft/session-portal-backend",
+      "title": "chore(deps): bump django from 4.2.21 to 5.2.17",
+      "url": "https://github.com/arbisoft/session-portal-backend/pull/80"
+    },
+    {
+      "merged": "2026-10-20",
+      "repo": "arbisoft/session-portal-backend",
+      "title": "ci: target dev branch for dependabot updates",
+      "url": "https://github.com/arbisoft/session-portal-backend/pull/79"
+    },
+    {
+      "merged": "2026-10-20",
+      "repo": "arbisoft/session-portal-backend",
+      "title": "build: prepare lint and tox config for django 5.2",
+      "url": "https://github.com/arbisoft/session-portal-backend/pull/78"
+    }
+  ]
+}
