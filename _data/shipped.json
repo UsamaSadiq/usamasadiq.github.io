@@ -1,8 +1,8 @@
 {
-  "generated_on": "2026-11-08",
+  "generated_on": "2026-11-09",
   "merged_by_month": [
     {
-      "merged": 16,
+      "merged": 17,
       "month": "2026-11"
     },
     {
@@ -47,6 +47,12 @@
     }
   ],
   "recent": [
+    {
+      "merged": "2026-11-08",
+      "repo": "openedx/django-config-models",
+      "title": "chore: add the edx-lint editorconfig",
+      "url": "https://github.com/openedx/django-config-models/pull/481"
+    },
     {
       "merged": "2026-11-06",
       "repo": "UsamaSadiq/OSSvitals",
@@ -340,12 +346,6 @@
       "repo": "arbisoft/session-portal-backend",
       "title": "ci: target dev branch for dependabot updates",
       "url": "https://github.com/arbisoft/session-portal-backend/pull/79"
-    },
-    {
-      "merged": "2026-10-20",
-      "repo": "arbisoft/session-portal-backend",
-      "title": "build: prepare lint and tox config for django 5.2",
-      "url": "https://github.com/arbisoft/session-portal-backend/pull/78"
     }
   ]
 }
