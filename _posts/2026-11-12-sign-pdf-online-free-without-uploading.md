@@ -5,6 +5,9 @@ date: 2026-11-12 09:30:00 +0500
 categories: [projects, frontend]
 tags: [pdf, e-signature, privacy, typescript, pdfjs, pdf-lib]
 description: "Sign a PDF free in your browser: add text and your signature, preview and download. The file never leaves your device: no server, no sign-up."
+image:
+  path: /assets/img/posts/sign-a-pdf-hero.jpg
+  alt: The Sign a PDF landing page, with a Choose a PDF button and a sample document showing a typed name and a signature
 ---
 
 > **You can sign a PDF for free without uploading it to a server by using a tool that runs entirely in your browser.** [Sign a PDF](https://usamasadiq.us/sign-a-pdf/) lets you open a PDF from your device, type text anywhere, draw your signature or add a photo of it, preview the result and download the signed copy. There is no server behind it, no account and no watermark, so the file never leaves your device.
