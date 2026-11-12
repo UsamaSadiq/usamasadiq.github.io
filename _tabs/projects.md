@@ -392,6 +392,27 @@ A selection of work I have led or owned, organized by impact. The flagship Open 
   <div class="project-card">
     <div class="project-status">Live Demo</div>
     <div class="project-header">
+      <div class="project-icon">✍️</div>
+      <h3 class="project-title">Sign a PDF</h3>
+    </div>
+    <p class="project-description">
+      A free, private PDF signing tool that runs entirely in the browser. Upload a PDF, type text anywhere on the page, draw or upload a signature, preview the final document and download it. Files never leave the device: there is no server, no upload and no sign-up.
+    </p>
+    <div class="project-tech">
+      <span class="tech-tag">TypeScript</span>
+      <span class="tech-tag">Vite</span>
+      <span class="tech-tag">pdf.js</span>
+      <span class="tech-tag">pdf-lib</span>
+    </div>
+    <div class="project-actions">
+      <a href="https://usamasadiq.us/sign-a-pdf/" class="project-btn project-btn-primary" target="_blank" rel="noopener">🚀 Launch App</a>
+      <a href="https://github.com/UsamaSadiq/sign-a-pdf" class="project-btn project-btn-secondary" target="_blank" rel="noopener">💻 Source</a>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="project-status">Live Demo</div>
+    <div class="project-header">
       <div class="project-icon">⚡</div>
       <h3 class="project-title">Flashmaster</h3>
     </div>
