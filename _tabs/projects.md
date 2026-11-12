@@ -396,7 +396,7 @@ A selection of work I have led or owned, organized by impact. The flagship Open 
       <h3 class="project-title">Sign a PDF</h3>
     </div>
     <p class="project-description">
-      A free, private PDF signing tool that runs entirely in the browser. Upload a PDF, type text anywhere on the page, draw or upload a signature, preview the final document and download it. Files never leave the device: there is no server, no upload and no sign-up.
+      A free, private PDF signing tool that runs entirely in the browser. Choose a PDF from your device, type text anywhere on the page, draw your signature or use a photo of it, preview the final document and download it. Files are never uploaded to a server, and there is no sign-up.
     </p>
     <div class="project-tech">
       <span class="tech-tag">TypeScript</span>
