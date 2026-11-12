@@ -406,6 +406,7 @@ A selection of work I have led or owned, organized by impact. The flagship Open 
     </div>
     <div class="project-actions">
       <a href="https://usamasadiq.us/sign-a-pdf/" class="project-btn project-btn-primary" target="_blank" rel="noopener">🚀 Launch App</a>
+      <a href="/posts/sign-pdf-online-free-without-uploading/" class="project-btn project-btn-secondary">📖 Read the Story</a>
       <a href="https://github.com/UsamaSadiq/sign-a-pdf" class="project-btn project-btn-secondary" target="_blank" rel="noopener">💻 Source</a>
     </div>
   </div>
