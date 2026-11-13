@@ -1,8 +1,8 @@
 {
-  "generated_on": "2026-11-12",
+  "generated_on": "2026-11-13",
   "merged_by_month": [
     {
-      "merged": 17,
+      "merged": 18,
       "month": "2026-11"
     },
     {
@@ -47,6 +47,12 @@
     }
   ],
   "recent": [
+    {
+      "merged": "2026-11-12",
+      "repo": "UsamaSadiq/OSSvitals",
+      "title": "feat(web): mirror the oep-10 support calendar on the support window page",
+      "url": "https://github.com/UsamaSadiq/OSSvitals/pull/113"
+    },
     {
       "merged": "2026-11-08",
       "repo": "openedx/django-config-models",
@@ -340,12 +346,6 @@
       "repo": "arbisoft/session-portal-backend",
       "title": "chore(deps): bump django from 4.2.21 to 5.2.17",
       "url": "https://github.com/arbisoft/session-portal-backend/pull/80"
-    },
-    {
-      "merged": "2026-10-20",
-      "repo": "arbisoft/session-portal-backend",
-      "title": "ci: target dev branch for dependabot updates",
-      "url": "https://github.com/arbisoft/session-portal-backend/pull/79"
     }
   ]
 }
