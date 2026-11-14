@@ -35,4 +35,4 @@ Fixes that the upgrade work surfaced in the wider Python ecosystem, and reports 
 - [algoliasearch-django](https://github.com/algolia/algoliasearch-django/pull/316) and [django-cache-memoize](https://github.com/peterbe/django-cache-memoize/pull/51): Django 3.2 test matrices (2021)
 - [swagger2rst](https://github.com/Arello-Mobile/swagger2rst/pull/11): PyYAML `FullLoader` fix (2021)
 - [python-cloudflare](https://github.com/cloudflare/python-cloudflare/pull/156): drop the `future` dependency (2023)
-- [Penpot](https://github.com/penpot/penpot/issues/12622): backend database pool default regression, reported (2026)
+- [Penpot](https://github.com/penpot/penpot/pull/13052): fix the backend database pool `min-size` regression and document the pool settings (2026)
