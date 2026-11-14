@@ -1,16 +1,16 @@
 {
   "all_time": {
     "issue": 142,
-    "pr": 946,
-    "review": 4385
+    "pr": 947,
+    "review": 4386
   },
-  "generated_on": "2026-11-13",
+  "generated_on": "2026-11-14",
   "organizations": 31,
   "repositories": 211,
   "year": {
     "issue": 3,
-    "pr": 169,
-    "review": 176,
+    "pr": 170,
+    "review": 177,
     "year": 2026
   }
 }
