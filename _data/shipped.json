@@ -1,8 +1,8 @@
 {
-  "generated_on": "2026-11-14",
+  "generated_on": "2026-11-15",
   "merged_by_month": [
     {
-      "merged": 18,
+      "merged": 19,
       "month": "2026-11"
     },
     {
@@ -47,6 +47,12 @@
     }
   ],
   "recent": [
+    {
+      "merged": "2026-11-14",
+      "repo": "penpot/penpot",
+      "title": ":bug: Fix database pool min-size falling back to max-size",
+      "url": "https://github.com/penpot/penpot/pull/13052"
+    },
     {
       "merged": "2026-11-12",
       "repo": "UsamaSadiq/OSSvitals",
@@ -340,12 +346,6 @@
       "repo": "arbisoft/session-portal-backend",
       "title": "chore(deps): bump django ecosystem packages for django 5.2",
       "url": "https://github.com/arbisoft/session-portal-backend/pull/81"
-    },
-    {
-      "merged": "2026-10-20",
-      "repo": "arbisoft/session-portal-backend",
-      "title": "chore(deps): bump django from 4.2.21 to 5.2.17",
-      "url": "https://github.com/arbisoft/session-portal-backend/pull/80"
     }
   ]
 }
