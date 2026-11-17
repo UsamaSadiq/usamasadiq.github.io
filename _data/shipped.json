@@ -1,8 +1,8 @@
 {
-  "generated_on": "2026-11-16",
+  "generated_on": "2026-11-17",
   "merged_by_month": [
     {
-      "merged": 19,
+      "merged": 20,
       "month": "2026-11"
     },
     {
@@ -47,6 +47,12 @@
     }
   ],
   "recent": [
+    {
+      "merged": "2026-11-16",
+      "repo": "openedx/edx-lint",
+      "title": "fix(constraints): release mysqlclient!=2.3.1 pin",
+      "url": "https://github.com/openedx/edx-lint/pull/591"
+    },
     {
       "merged": "2026-11-14",
       "repo": "penpot/penpot",
@@ -340,12 +346,6 @@
       "repo": "arbisoft/session-portal-backend",
       "title": "chore(deps): bump remaining backend dependencies",
       "url": "https://github.com/arbisoft/session-portal-backend/pull/82"
-    },
-    {
-      "merged": "2026-10-20",
-      "repo": "arbisoft/session-portal-backend",
-      "title": "chore(deps): bump django ecosystem packages for django 5.2",
-      "url": "https://github.com/arbisoft/session-portal-backend/pull/81"
     }
   ]
 }
